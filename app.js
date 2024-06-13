@@ -36,11 +36,25 @@ app.post('/add-excuse', async (req, res) => {
     }
 });
 
+
+//excuses deleting
+app.delete('/excuse/:id', async ( req, res )=>{
+    try {
+        const id = req.params.id;
+        console.log(id);
+        await Excuses.findByIdAndDelete(id);
+        res.status(204).end();
+    }
+    catch (err) {
+        res.status(500).json({ message: err })
+    }
+})
+
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
-
 app.listen(PORT, () => {
     console.log(`Server runs on PORT: ${PORT}`);
 });
