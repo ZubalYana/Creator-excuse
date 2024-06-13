@@ -1,4 +1,4 @@
-//new exuces adding
+//new excuses adding
 $('.createExcuse').click(()=>{
     let data = {
         author: $('#author').val(),
@@ -10,3 +10,14 @@ $('.createExcuse').click(()=>{
     })
 
 })
+
+//excuses deleting
+$('.deleteExcuse').click((e)=>{
+    console.log(e.target)
+    let id = e.target.id;
+    console.log(id)
+    axios.delete(`http://localhost:3000/excuse/${id}`)
+    .then(res => {
+        location.reload()
+    })
+    })
