@@ -36,7 +36,15 @@ app.post('/add-excuse', async (req, res) => {
     }
 });
 
-
+//get all the excuses
+app.get('/excuses', async (req, res)=>{
+    try {
+        const excuses = await Excuses.find();
+        res.json(excuses)
+    } catch (err) {
+        res.status(500).json({ message: err })
+    }
+})
 //excuses deleting
 app.delete('/excuse/:id', async ( req, res )=>{
     try {
