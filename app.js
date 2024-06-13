@@ -61,6 +61,19 @@ app.delete('/excuse/:id', async ( req, res )=>{
 })
 
 
+//excuses editing
+app.put('/edit-excuse/:id', async (req, res) => {
+    try {
+        const id = req.params.id;
+        const excuse = await Excuses.findByIdAndUpdate(id, req.body, { new: true });
+        res.status(201).json(excuse);
+    }
+    catch (err) {
+        res.status(500).json({ message: err })
+    }
+})
+
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
