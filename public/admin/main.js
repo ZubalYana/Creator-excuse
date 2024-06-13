@@ -20,4 +20,28 @@ $('.deleteExcuse').click((e)=>{
     .then(res => {
         location.reload()
     })
+})
+
+//excuses editing
+$('.editExcuse').click((e)=>{
+    $('.editExcusePopup').css('display', 'flex')
+    $('#closeEditPopup').click(()=>{
+        $('.editExcusePopup').css('display', 'none')
     })
+    let ID = e.target.id;
+    if (ID.substring(0, 4) == 'edit') {
+        ID = ID.substring(4);
+        console.log(ID);
+
+        $('.acceptChanges').click(()=>{
+            let data = {
+                excuse: $('#newExcuse').val(),
+            };
+            axios.put(`http://localhost:3000/edit-excuse/${ID}`, data)
+                .then(res => {
+                    $('.editExcusePopup').css('display', 'none')
+                    location.reload();
+                })
+        })
+    }
+})

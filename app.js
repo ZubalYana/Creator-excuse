@@ -60,7 +60,6 @@ app.delete('/excuse/:id', async ( req, res )=>{
     }
 })
 
-
 //excuses editing
 app.put('/edit-excuse/:id', async (req, res) => {
     try {
