@@ -92,3 +92,19 @@ a{
     right: 8px;
     cursor: pointer;
 }
+.homePage{
+    width: 1300px;
+    padding: 36px;
+}
+.homePage_header{
+    width: 100%;
+}
+.homePage_title{
+    color: #F5A006;
+    font-size: 32px;
+    font-weight: 700;
+}
+.title_person{
+    width: 23px;
+    height: 25px;
+}
