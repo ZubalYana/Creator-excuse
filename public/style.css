@@ -44,6 +44,9 @@
     width: 20px;
     height: 22px;
 }
+a{
+    text-decoration: none;
+}
 #homePage{
     background-color: #fff;
     color: #F5A006;

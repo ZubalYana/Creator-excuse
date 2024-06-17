@@ -44,6 +44,9 @@
     width: 20px;
     height: 22px;
 }
+a{
+    text-decoration: none;
+}
 #homePage{
     color: #fff;
     margin-bottom: 16px;
