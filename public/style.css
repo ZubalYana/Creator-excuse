@@ -4,3 +4,88 @@
     box-sizing: border-box;
     font-family: Montserrat;
 }
+.wrap{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+.menu{
+    width: 195px;
+    height: 100%;
+    background-color: #F5A006;
+    border-radius: 0 37px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 34px;
+}
+.menu_logo{
+    width: 86px;
+    height: 82px;
+}
+.menu_pages{
+    width: 100%;
+    padding-left: 30px;
+    margin-top: 60px;
+}
+.menu_page{
+    width: 100%;
+    height: 35px;
+    border-radius: 17px 0 0 17px;
+    padding: 7px 7px 7px 12px;
+    font-size: 19px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.menu_page img{
+    width: 20px;
+    height: 22px;
+}
+#homePage{
+    color: #fff;
+    margin-bottom: 16px;
+}
+#adminPage{
+    background-color: #fff;
+    color: #F5A006;
+}
+.menu_logIn{
+    width: 145px;
+    height: 103px;
+    border-radius: 6px;
+    background-color: #D9D9D9;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.72);
+    margin-top: 310px;
+}
+.logInIcon{
+    width: 32px;
+    height: 32px;
+}
+.menu_logIn_nickName{
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 8px;
+}
+.menu_logIn_gmail{
+    font-size: 10px;
+    font-weight: 600;
+    color: #676767;
+}
+.logOutIcon{
+    width: 16px;
+    height: 14px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+}
