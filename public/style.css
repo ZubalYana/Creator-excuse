@@ -92,3 +92,64 @@ a{
     right: 8px;
     cursor: pointer;
 }
+
+.container{
+    width: 1300px;
+    padding: 36px;
+}
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.header_title{
+    color: #F5A006;
+    font-size: 32px;
+    font-weight: 700;
+}
+.title_home{
+    width: 23px;
+    height: 25px;
+}
+.header_con{
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+.header_notifications{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    position: relative;
+}
+.bell{
+    width: 28px;
+    height: 32px;
+}
+.header_notificationsCircle{
+    width: 9px;
+    height: 9px;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.72);
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    background-color: #000;
+    border-radius: 50%;
+}
+.header_settings{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    position: relative;
+    background-color: #F5A006;
+}
+.gar{
+    width: 32px;
+    height: 32px;
+}
