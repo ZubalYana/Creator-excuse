@@ -45,12 +45,12 @@
     height: 22px;
 }
 #homePage{
-    color: #fff;
+    background-color: #fff;
+    color: #F5A006;
     margin-bottom: 16px;
 }
 #adminPage{
-    background-color: #fff;
-    color: #F5A006;
+    color: #fff;
 }
 .menu_logIn{
     width: 145px;
