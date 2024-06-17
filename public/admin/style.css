@@ -98,6 +98,8 @@ a{
 }
 .homePage_header{
     width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 .homePage_title{
     color: #F5A006;
@@ -109,7 +111,7 @@ a{
     height: 25px;
 }
 .homePage_headerCon{
-    width: 100px;
+    width: 120px;
     display: flex;
     justify-content: space-between;
 }
@@ -132,7 +134,21 @@ a{
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.72);
     position: absolute;
     top: 7px;
-    right: 1px;
+    right: 10px;
     background-color: #000;
     border-radius: 50%;
+}
+.homePage_settings{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    position: relative;
+    background-color: #F5A006;
+}
+.gar{
+    width: 32px;
+    height: 32px;
 }
