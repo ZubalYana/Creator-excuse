@@ -1,4 +1,4 @@
-//getting all the excuses
+//displating all the excuses
 axios.get('http://localhost:3000/excuses')
 .then((res)=>{
     let excuses = res.data;
