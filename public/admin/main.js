@@ -18,6 +18,8 @@ $('#createExcuse').click(()=>{
     axios.post('http://localhost:3000/add-excuse', data)
     .then(()=>{
         console.log(`Excuse data was sended successfully`)
+        $('#author').val()
+        $('#excuse').val()
     })
 
 })
