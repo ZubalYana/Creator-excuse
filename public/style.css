@@ -166,7 +166,7 @@ a{
 }
 .centerCont{
     width: 100%;
-    height: 65%;
+    height: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -265,9 +265,9 @@ color: #F5A006;
     margin-top: 50px;
 }
 .buttonCont{
-    width: 100%;
+    width: 92.5%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 
@@ -354,3 +354,65 @@ color: #F5A006;
     height: 28px;
     box-shadow:1px 1px 4px 4px #00000025;
   }
+
+
+
+.historyList li{
+    width: 1260px;
+    height: 58px;
+    border-radius: 15px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #DDDDDD;
+}
+.historyListLiLeft{
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 60%;
+    height: 100%;
+}
+.historyListLiCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 100%;
+}
+.historyListLiRight{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height: 100%;
+}
+.lastExcuses{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 35%;
+    margin-top: 80px;
+}
+.excuseHistory h2{
+    color: #F5A006;
+    padding-left: 15px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.historyListLiLeft h2{
+    color: #000000;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
+.excuseDate{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #8C8C8C;
+}
