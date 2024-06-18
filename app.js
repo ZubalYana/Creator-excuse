@@ -18,7 +18,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 
 const excuseSchema = new mongoose.Schema({
     author: String,
-    excuse: String
+    excuse: String,
 });
 const Excuses = mongoose.model('Excuses', excuseSchema);
 
@@ -71,6 +71,9 @@ app.put('/edit-excuse/:id', async (req, res) => {
         res.status(500).json({ message: err })
     }
 })
+
+
+
 
 
 app.use(express.static(path.join(__dirname, 'public')));

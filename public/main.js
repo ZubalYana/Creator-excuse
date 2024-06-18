@@ -8,18 +8,22 @@ $('.generate').click(() => {
         if (numExcuses > 0) {
             const randomIndex = Math.floor(Math.random() * numExcuses);
             const randomExcuse = excuses[randomIndex].excuse;
-            $('#excuse').text(randomExcuse);
-            alert('gf')
+            $('.excuseScreen').text(randomExcuse);
+           
         } else {
-            $('#excuse').text("No excuses available.");
-            alert('gf')
+            $('.excuseScreen').text("No excuses available.");
+           
         }
     })
     .catch((error) => {
         console.error('Error fetching excuses:', error);
-        alert('gf')
+        
     });
 });
+
+
+
+
 
 
 
