@@ -6,6 +6,15 @@ axios.get('http://localhost:3000/excuses')
         $('.excusesContainer').append(
             `<div class="excuse">
                 <div class="excuseText">${el.excuse}</div>
+                                        <div class="excuse_actions">
+                            <div class="excuse_edit">
+                                <img src="./Imgs/edit action.png" alt="edit">
+                            </div>
+                            <div class="excuse_delete">
+                                <img src="./Imgs/bin top.png" alt="delete top">
+                                <img src="./Imgs/bin bottom.png" alt="delete bottom">
+                            </div>
+                        </div>
             </div>`
         )
     }
