@@ -43,18 +43,45 @@
 
             <div class="centerCont">
                 <div class="textCont"> 
-                    <h3>Потрібна коротка відмазка?</h2>
-                    <h3> У нас є все, що вам потрібно! Наш генератор відмазок 
-                    забезпечує ідеальне алібі для будь-якої ситуації.</h2>
+                    <h3 ><span class="highlighted-text">Потрібна коротка відмазка? </span>У нас є все, що вам потрібно! Наш генератор відмазок <br> 
+                    забезпечує ідеальне алібі для будь-якої ситуації.</h3>
                 </div>
-                <div class="excuseScreen"></div>
+                <div class="excuseScreen" id="excuse">
+                   
+
+                </div>
                 <div class="buttonCont">
-                    <div class="categorychoice"></div>
-                    <button class="generate">згенерувати</button>
+                    <div class="categorychoice">
+                        <h4>Виберіть Категорію</h4>
+                        <select id="category_select">
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <button class="generate" id="generate">згенерувати</button>
                     <div class="rating">
-                        Оцініть відмазку
-                        <div class="stars"></div>
-                        <div class="send"></div>
+                        <h4>Оцініть відмазку</h4>
+
+                        <div class="ratingStar">
+
+                            <input type="radio" id="star-1" name="rating" value="1">
+                            <label for="star-1" title="Оценка «1»"></label>
+                          
+                            <input type="radio" id="star-2" name="rating" value="2">
+                            <label for="star-2" title="Оценка «2»"></label>
+                          
+                            <input type="radio" id="star-3" name="rating" value="3">
+                            <label for="star-3" title="Оценка «3»"></label>
+                          
+                            <input type="radio" id="star-4" name="rating" value="4">
+                            <label for="star-4" title="Оценка «4»"></label>
+                          
+                            <input type="radio" id="star-5" name="rating" value="5">
+                            <label for="star-5" title="Оценка «5»"></label>
+                          
+                        </div>
                     </div>
                 </div>
                 <div class="lastExcuses">
