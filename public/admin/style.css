@@ -166,7 +166,7 @@ a{
     display: flex;
     flex-direction: column;
 }
-.homePage_addExcusesCon h3{
+h3{
     font-size: 26px;
     font-weight: 500;
     color: #F5A006;
@@ -201,5 +201,7 @@ textarea{
     background-color: #fff;
     box-shadow: 0 0 1px 1px #F5A006;   
     color: #F5A006;
-
+}
+.homePage_rightCon{
+    width: 50%;
 }

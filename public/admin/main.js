@@ -8,6 +8,7 @@ axios.get('http://localhost:3000/excuses')
         )
     }
 })
+
 //new excuses adding
 $('#createExcuse').click(()=>{
     let data = {
