@@ -180,3 +180,26 @@ textarea{
     margin-top: 15px;
     padding: 10px;
 }
+#createExcuse{
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5A006;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.72);  
+    transition: 0.5s ease; 
+    cursor: pointer;
+    margin-top: 10px;
+}
+#createExcuse:hover{
+    background-color: #fff;
+    box-shadow: 0 0 1px 1px #F5A006;   
+    color: #F5A006;
+
+}
