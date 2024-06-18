@@ -12,7 +12,7 @@ axios.get('http://localhost:3000/excuses')
                             </div>
                             <div class="excuse_delete excuse_action">
                                 <img src="./Imgs/bin top.png" alt="delete top" class="excuse_deleteTop">
-                                <img src="./Imgs/bin bottom.png" alt="delete bottom">
+                                <img src="./Imgs/bin bottom.png" alt="delete bottom" id="${el._id}" class="deleteExcuse">
                             </div>
                         </div>
             </div>`
@@ -37,6 +37,17 @@ $('.excuse_delete').hover(
         $(this).find('.excuse_deleteTop').removeClass('delete-hover');
     }
 ); 
+
+//excuses deleting
+$('.deleteExcuse').click((e)=>{
+    console.log(e.target)
+    let id = e.target.id;
+    console.log(id)
+    axios.delete(`http://localhost:3000/excuse/${id}`)
+    .then(res => {
+        location.reload()
+    })
+})
 })
 
 //new excuses adding
@@ -55,16 +66,7 @@ $('#createExcuse').click(()=>{
 
 })
 
-//excuses deleting
-$('.deleteExcuse').click((e)=>{
-    console.log(e.target)
-    let id = e.target.id;
-    console.log(id)
-    axios.delete(`http://localhost:3000/excuse/${id}`)
-    .then(res => {
-        location.reload()
-    })
-})
+
 
 //excuses editing
 $('.editExcuse').click((e)=>{
