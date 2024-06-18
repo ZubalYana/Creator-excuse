@@ -213,7 +213,7 @@ textarea{
 }
 .excuse{
     width: 98%;
-    height: 43px;
+    height: 50px;
     border-radius: 12px;
     background-color: #fff;
     border: 2px rgba(140, 140, 140, 0.78) solid;  
@@ -225,5 +225,28 @@ textarea{
     font-size: 13px;
     font-weight: 700;
     color: #8C8C8C;
-
+}
+.excuse_action{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.excuse_edit img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.excuse_delete{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.excuse_delete img{
+    width: 100%;
+}
+.excuse_actions{
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
 }
