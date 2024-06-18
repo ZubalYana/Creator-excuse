@@ -231,6 +231,9 @@ textarea{
     height: 25px;
     cursor: pointer;
 }
+.excuse_edit{
+    transition: 0.5s ease;
+}
 .excuse_edit img{
     width: 100%;
     display: flex;
