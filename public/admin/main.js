@@ -1,3 +1,13 @@
+//getting all the excuses
+axios.get('http://localhost:3000/excuses')
+.then((res)=>{
+    let excuses = res.data;
+    for(let el of excuses){
+        $('.excusesContainer').append(
+            `<div class="excuse">${el.excuse}</div>`
+        )
+    }
+})
 //new excuses adding
 $('#createExcuse').click(()=>{
     let data = {
