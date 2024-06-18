@@ -243,13 +243,24 @@ textarea{
 .excuse_delete{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
+    position: relative;
 }
 .excuse_delete img{
-    width: 100%;
+    width: 88%;
 }
 .excuse_actions{
     width: 70px;
     display: flex;
     justify-content: space-between;
+}
+.excuse_deleteTop{
+    position: absolute;
+    top: 0;
+    transition: 0.5s ease;
+}
+.delete-hover{
+    transform: rotate(-20deg);
+    top: -5px;
+    left: -2px;
 }

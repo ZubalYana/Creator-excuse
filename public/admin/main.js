@@ -11,7 +11,7 @@ axios.get('http://localhost:3000/excuses')
                                 <img src="./Imgs/edit action.png" alt="edit" class="edit_icon">
                             </div>
                             <div class="excuse_delete excuse_action">
-                                <img src="./Imgs/bin top.png" alt="delete top">
+                                <img src="./Imgs/bin top.png" alt="delete top" class="excuse_deleteTop">
                                 <img src="./Imgs/bin bottom.png" alt="delete bottom">
                             </div>
                         </div>
@@ -19,7 +19,7 @@ axios.get('http://localhost:3000/excuses')
         )
     }
 
-    
+
 //hover animations
 $('.excuse_edit').hover(
     function () {
@@ -29,6 +29,14 @@ $('.excuse_edit').hover(
         $(this).css('transform', 'rotate(0deg)');
     }
 );
+$('.excuse_delete').hover(
+    function () {
+        $(this).find('.excuse_deleteTop').addClass('delete-hover');
+    },
+    function () {
+        $(this).find('.excuse_deleteTop').removeClass('delete-hover');
+    }
+); 
 })
 
 //new excuses adding
