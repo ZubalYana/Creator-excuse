@@ -205,3 +205,9 @@ textarea{
 .homePage_rightCon{
     width: 50%;
 }
+.excusesContainer{
+    width: 100%;
+    margin-top: 10px;
+    max-height: 520px;
+    overflow-y: auto;
+}
