@@ -1,5 +1,5 @@
 //new excuses adding
-$('.createExcuse').click(()=>{
+$('#createExcuse').click(()=>{
     let data = {
         author: $('#author').val(),
         excuse: $('#excuse').val(),
