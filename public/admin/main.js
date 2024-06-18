@@ -4,7 +4,9 @@ axios.get('http://localhost:3000/excuses')
     let excuses = res.data;
     for(let el of excuses){
         $('.excusesContainer').append(
-            `<div class="excuse">${el.excuse}</div>`
+            `<div class="excuse">
+                <div class="excuseText">${el.excuse}</div>
+            </div>`
         )
     }
 })
