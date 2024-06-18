@@ -152,3 +152,31 @@ a{
     width: 32px;
     height: 32px;
 }
+.homePage_content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.homePage_leftCon{
+    width: 50%;
+}
+.homePage_addExcusesCon{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.homePage_addExcusesCon h3{
+    font-size: 26px;
+    font-weight: 500;
+    color: #F5A006;
+}
+textarea{
+    resize: none;
+    width: 492px;
+    height: 143px;
+    border-radius: 12px;
+    background-color: #DDDDDD;
+    margin-top: 15px;
+    padding: 10px;
+}
