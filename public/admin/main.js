@@ -20,6 +20,7 @@ $('#createExcuse').click(()=>{
         console.log(`Excuse data was sended successfully`)
         $('#author').val()
         $('#excuse').val()
+        location.reload();
     })
 
 })
