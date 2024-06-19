@@ -53,7 +53,7 @@ $(document).ready(function() {
         
         historyList.prepend(li);
 
-        if (historyList.children().length > 4) {
+        if (historyList.children().length > 10) {
             historyList.children().last().remove();
         }
 
@@ -93,7 +93,7 @@ $(document).ready(function() {
             });
 
             
-            while (historyList.children().length > 4) {
+            while (historyList.children().length > 10) {
                 historyList.children().last().remove();
             }
         }
