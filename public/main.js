@@ -121,8 +121,11 @@ $('.themeChanger').click(function(){
 function changeTheme(theme){
     if(theme == 'light'){
         $('.themeChanger').css('justify-content', 'flex-start')
+        $('.wrap').css('background-color', '#fff')
+
     }else{
         $('.themeChanger').css('justify-content', 'flex-end')
+        $('.wrap').css('background-color', '#000')
     }
 }
 changeTheme(theme);
