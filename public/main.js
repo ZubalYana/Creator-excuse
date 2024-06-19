@@ -17,6 +17,14 @@ $(document).ready(function() {
             } else {
                 $('.excuseScreen').text("No excuses available.");
             }
+            $('.excuse_delete').hover(
+                function () {
+                    $(this).find('.excuse_deleteTop').addClass('delete-hover');
+                },
+                function () {
+                    $(this).find('.excuse_deleteTop').removeClass('delete-hover');
+                }
+            ); 
         })
         .catch((error) => {
             console.error('Error fetching excuses:', error);
