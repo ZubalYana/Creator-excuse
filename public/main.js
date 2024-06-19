@@ -122,10 +122,20 @@ function changeTheme(theme){
     if(theme == 'light'){
         $('.themeChanger').css('justify-content', 'flex-start')
         $('.wrap').css('background-color', '#fff')
+        $('h3').css('color', '#000')
+        $('h4').css('color', '#000')
+
+        $('.header_notificationsCircle').css('background-color', '#000')
+        $('.header_notificationsCircle').css('box-shadow', '0 0 1px 1px rgba(0, 0, 0, 0.72)')
 
     }else{
         $('.themeChanger').css('justify-content', 'flex-end')
         $('.wrap').css('background-color', '#000')
+        $('h3').css('color', '#fff')
+        $('h4').css('color', '#fff')
+        $('.header_notificationsCircle').css('background-color', '#fff')
+        $('.header_notificationsCircle').css('box-shadow', 'rgba(255, 255, 255, 0.72)')
+
     }
 }
 changeTheme(theme);
