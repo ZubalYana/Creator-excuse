@@ -113,10 +113,10 @@ function changeTheme(theme){
         $('.homePage_notificationsCircle').css('background-color', '#000')
         $('.homePage_notificationsCircle').css('box-shadow', '0 0 1px 1px rgba(0, 0, 0, 0.72)')
         $('.menu_logo').attr('src', './Imgs/LogoLight.png')
-        $('#homePage').css('background-color', '#fff')
-        $('#adminPage').css('color', '#fff')
+        $('#adminPage').css('background-color', '#fff')
+        $('#homePage').css('color', '#fff')
         $('.menu_logo').attr('src', './Imgs/LogoLight.png')
-        $('.personIcon').attr('src', './Imgs/person icon.png')
+        $('.homeIcon').attr('src', './Imgs/home icon.png')
 
     }else{
         $('.themeChanger').css('justify-content', 'flex-end')
@@ -126,9 +126,9 @@ function changeTheme(theme){
         $('.homePage_notificationsCircle').css('background-color', '#fff')
         $('.homePage_notificationsCircle').css('box-shadow', 'rgba(255, 255, 255, 0.72)')
         $('.menu_logo').attr('src', './Imgs/LogoDark.png')
-        $('#homePage').css('background-color', '#000')
-        $('#adminPage').css('color', '#000')
-        $('.personIcon').attr('src', './Imgs/person icon dark.png')
+        $('#adminPage').css('background-color', '#000')
+        $('#homePage').css('color', '#000')
+        $('.homeIcon').attr('src', './Imgs/home icon dark.png')
 
     }
 }
