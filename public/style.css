@@ -12,6 +12,7 @@
 .wrap{
     width: 100%;
     height: 100vh;
+    position: fixed;
     display: flex;
     justify-content: space-between;
 }
@@ -171,7 +172,7 @@ a{
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    padding-top: 55px;
+    padding-top: 35px;
     
 }
 .textCont h3 .highlighted-text{
@@ -185,8 +186,8 @@ color: #F5A006;
 }
 .textCont h3 {
         margin: 0; 
-        font-size: 28px;
-         line-height: 34px;
+        font-size: 24px;
+         line-height: 32px;
          font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -286,14 +287,6 @@ color: #F5A006;
     font-size: 18px;
     line-height: 22px;
 }
-
-
-
-
-
-
-
-
 .ratingStar {
     width: 200px;
     height: 40px;
@@ -395,10 +388,21 @@ color: #F5A006;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 35%;
-    margin-top: 80px;
+    height: 100%;
+    margin-top: 30px;
+    overflow: scroll;
+    padding-top: 70px;
+    margin-bottom: 15px;
+
 }
-.excuseHistory h2{
+::-webkit-scrollbar-thumb{
+    background: orange; 
+ }
+
+.titleHistory{
+    position: relative;
+    top: 20px;
+    left: -540px;
     color: #F5A006;
     padding-left: 15px;
     font-size: 20px;
