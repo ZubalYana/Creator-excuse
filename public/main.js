@@ -22,7 +22,14 @@ $(document).ready(function() {
             console.error('Error fetching excuses:', error);
         });
     });
-
+    $('.excuse_delete').hover(
+        function () {
+            $(this).find('.excuse_deleteTop').addClass('delete-hover');
+        },
+        function () {
+            $(this).find('.excuse_deleteTop').removeClass('delete-hover');
+        }
+    ); 
     function addToHistory(excuse) {
         let historyList = $('.historyList');
         let currentDate = getCurrentDate();
@@ -43,14 +50,6 @@ $(document).ready(function() {
         }
 
         saveHistoryToLocalStorage();
-        $('.excuse_delete').hover(
-            function () {
-                $(this).find('.excuse_deleteTop').addClass('delete-hover');
-            },
-            function () {
-                $(this).find('.excuse_deleteTop').removeClass('delete-hover');
-            }
-        ); 
     }
 
     
@@ -95,22 +94,3 @@ $(document).ready(function() {
         saveHistoryToLocalStorage();
     });
 });
-
-
-
-
-
-
-
-
-
-
-//hover animations
-$('.excuse_delete').hover(
-    function () {
-        $(this).find('.excuse_deleteTop').addClass('delete-hover');
-    },
-    function () {
-        $(this).find('.excuse_deleteTop').removeClass('delete-hover');
-    }
-); 
