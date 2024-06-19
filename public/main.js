@@ -102,3 +102,27 @@ $(document).ready(function() {
         saveHistoryToLocalStorage();
     });
 });
+
+
+//theme changing
+let theme = localStorage.getItem('theme') || 'light';
+$('.themeChanger').click(function(){
+    if(theme == 'light'){
+        theme = 'dark';
+        localStorage.setItem('theme', theme);
+        changeTheme(theme);
+
+    }else{
+        theme = 'light';
+        localStorage.setItem('theme', theme);
+        changeTheme(theme);
+    }
+})
+function changeTheme(theme){
+    if(theme == 'light'){
+        $('.themeChanger').css('justify-content', 'flex-start')
+    }else{
+        $('.themeChanger').css('justify-content', 'flex-end')
+    }
+}
+changeTheme(theme);
