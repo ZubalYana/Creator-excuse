@@ -284,19 +284,127 @@ textarea{
     top: -5px;
     left: -2px;
 }
-.themeChanger{
-    width: 65px;
+.themeChanger {
+    width: 33%;
     height: 30px;
     border-radius: 20px;
-    background-color: #000;
-    position: absolute;
+    background-color: #E2E2E2;
     cursor: pointer;
     display: flex;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
 }
-.themeChanger_circle{
+
+.themeChanger_circle {
+    width: 25px;
+    height: 25px;
+    background-color: #FFC700;
+    border-radius: 50%;
+    transition: transform 0.8s ease;
+    border: solid 0.5px #F5A006;
+}
+
+.themeChanger.dark .themeChanger_circle {
+    transform: translateX(35px);
+}
+
+.BoxThemeChanger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 70%;
+    height: 45px;
+    border-radius: 25px;
+    padding: 0 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.BoxThemeChanger img {
     width: 30px;
     height: 30px;
-    background-color: #D48800;
-    border: 1px #000 solid;
     border-radius: 50%;
+}
+.BoxLight{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.BoxDark{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.settingsMenu{
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: -336px;
+    width: 336px;
+    height: 100%;
+    background-color: #F5A006;
+    position: fixed;
+    transition: right 0.8s ease;
+    
+}
+.settingsMenuTop {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+}
+.garClose{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+height: 40px;
+}
+.settingsMenuCener{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 60%;
+    display: flex;
+}
+.settingsMenuCenerTop{
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    width: 100%;
+    height: 9%;
+    justify-content: space-evenly;
+}
+.settingsMenuCenerTop img{
+    width: 23px;
+    height: 24px;
+}
+.settingsMenuCenerTop h2{
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+.settingsMenuCenerBottom{
+    display: flex;
+    width: 100%;
+    height: 92%;
+}
+.settingsMenuBottom{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 95px;
+    padding-right: 45px;
+    flex-direction: column;
+    padding-top: 140px;
 }

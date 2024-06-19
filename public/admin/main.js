@@ -104,32 +104,72 @@ $('.themeChanger').click(function(){
         changeTheme(theme);
     }
 })
+
 function changeTheme(theme){
     if(theme == 'light'){
         $('.themeChanger').css('justify-content', 'flex-start')
         $('.wrap').css('background-color', '#fff')
         $('h3').css('color', '#000')
         $('h4').css('color', '#000')
-        $('.homePage_notificationsCircle').css('background-color', '#000')
-        $('.homePage_notificationsCircle').css('box-shadow', '0 0 1px 1px rgba(0, 0, 0, 0.72)')
+        $('.header_notificationsCircle').css('background-color', '#000')
+        $('.header_notificationsCircle').css('box-shadow', '0 0 1px 1px rgba(0, 0, 0, 0.72)')
         $('.menu_logo').attr('src', './Imgs/LogoLight.png')
-        $('#adminPage').css('background-color', '#fff')
-        $('#homePage').css('color', '#fff')
+        $('#homePage').css('background-color', '#fff')
+        $('#adminPage').css('color', '#fff')
         $('.menu_logo').attr('src', './Imgs/LogoLight.png')
-        $('.homeIcon').attr('src', './Imgs/home icon.png')
+        $('.personIcon').attr('src', './Imgs/person icon.png')
+        $('.BoxThemeChanger').css('background-color', '#fff')
+        $('.themeChanger').css('background-color', '#E2E2E2')
+        $('.themeChanger_circle').css('background-color', '#FFC700')
+        $('.themeChanger_circle').css('border', 'solid 0.5px #F5A006')
 
     }else{
         $('.themeChanger').css('justify-content', 'flex-end')
         $('.wrap').css('background-color', '#000')
         $('h3').css('color', '#fff')
         $('h4').css('color', '#fff')
-        $('.homePage_notificationsCircle').css('background-color', '#fff')
-        $('.homePage_notificationsCircle').css('box-shadow', 'rgba(255, 255, 255, 0.72)')
+        $('.header_notificationsCircle').css('background-color', '#fff')
+        $('.header_notificationsCircle').css('box-shadow', 'rgba(255, 255, 255, 0.72)')
         $('.menu_logo').attr('src', './Imgs/LogoDark.png')
-        $('#adminPage').css('background-color', '#000')
-        $('#homePage').css('color', '#000')
-        $('.homeIcon').attr('src', './Imgs/home icon dark.png')
-
+        $('#homePage').css('background-color', '#000')
+        $('#adminPage').css('color', '#000')
+        $('.personIcon').attr('src', './Imgs/person icon dark.png')
+        $('.BoxThemeChanger').css('background-color', '#000')
+        $('.themeChanger').css('background-color', '#3B3B3B')
+        $('.themeChanger_circle').css('background-color', '#8C8C8C')
+        $('.themeChanger_circle').css('border', 'none')
     }
 }
 changeTheme(theme);
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const garButton = document.querySelector('.gar');
+    const settingsMenu = document.querySelector('.settingsMenu');
+
+    garButton.addEventListener('click', function() {
+        const menuVisible = settingsMenu.style.right === '0px';
+
+        if (!menuVisible) {
+            settingsMenu.style.right = '0px'; 
+        } else {
+            settingsMenu.style.right = '-336px'; 
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const settingsMenu = document.querySelector('.settingsMenu');
+    const garCloseIcon = document.querySelector('.garClose');
+
+
+    garCloseIcon.addEventListener('click', function() {
+        settingsMenu.style.right = '-336px'; 
+    });
+});

@@ -439,35 +439,61 @@ color: #F5A006;
 .deleteExcuse{
     width: 25px;
 }
-.themeChanger{
-    width: 65px;
+.themeChanger {
+    width: 33%;
     height: 30px;
     border-radius: 20px;
-    background-color: #000;
-    position: absolute;
+    background-color: #E2E2E2;
     cursor: pointer;
     display: flex;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
 }
 
+.themeChanger_circle {
+    width: 25px;
+    height: 25px;
+    background-color: #FFC700;
+    border-radius: 50%;
+    transition: transform 0.8s ease;
+    border: solid 0.5px #F5A006;
+}
 
+.themeChanger.dark .themeChanger_circle {
+    transform: translateX(35px);
+}
 
+.BoxThemeChanger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 70%;
+    height: 45px;
+    border-radius: 25px;
+    padding: 0 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
-
-.themeChanger_circle{
+.BoxThemeChanger img {
     width: 30px;
     height: 30px;
-    background-color: #D48800;
-    border: 1px #000 solid;
     border-radius: 50%;
-
-
 }
-
-
-
-
-
-
+.BoxLight{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.BoxDark{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .settingsMenu{
     display: flex;
@@ -497,6 +523,8 @@ color: #F5A006;
 height: 40px;
 }
 .settingsMenuCener{
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 60%;
     display: flex;
@@ -505,9 +533,8 @@ height: 40px;
     display: flex;
     align-items: flex-start;
     justify-content: start;
-    padding-left: 15px;
-    width: 80%;
-    height: 8%;
+    width: 100%;
+    height: 9%;
     justify-content: space-evenly;
 }
 .settingsMenuCenerTop img{
@@ -529,4 +556,10 @@ height: 40px;
     width: 100%;
     height: 30%;
     display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 95px;
+    padding-right: 45px;
+    flex-direction: column;
+    padding-top: 140px;
 }

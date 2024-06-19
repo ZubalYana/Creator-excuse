@@ -135,6 +135,10 @@ function changeTheme(theme){
         $('#adminPage').css('color', '#fff')
         $('.menu_logo').attr('src', './Imgs/LogoLight.png')
         $('.personIcon').attr('src', './Imgs/person icon.png')
+        $('.BoxThemeChanger').css('background-color', '#fff')
+        $('.themeChanger').css('background-color', '#E2E2E2')
+        $('.themeChanger_circle').css('background-color', '#FFC700')
+        $('.themeChanger_circle').css('border', 'solid 0.5px #F5A006')
 
     }else{
         $('.themeChanger').css('justify-content', 'flex-end')
@@ -147,13 +151,16 @@ function changeTheme(theme){
         $('#homePage').css('background-color', '#000')
         $('#adminPage').css('color', '#000')
         $('.personIcon').attr('src', './Imgs/person icon dark.png')
-
+        $('.BoxThemeChanger').css('background-color', '#000')
+        $('.themeChanger').css('background-color', '#3B3B3B')
+        $('.themeChanger_circle').css('background-color', '#8C8C8C')
+        $('.themeChanger_circle').css('border', 'none')
     }
 }
 changeTheme(theme);
 
 
-
+// settings menu
 document.addEventListener('DOMContentLoaded', function() {
     const garButton = document.querySelector('.gar');
     const settingsMenu = document.querySelector('.settingsMenu');
