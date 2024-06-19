@@ -433,6 +433,7 @@ color: #F5A006;
 .excuse_delete{
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 .deleteExcuse{
     width: 30px;

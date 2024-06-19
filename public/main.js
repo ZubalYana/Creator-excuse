@@ -43,6 +43,14 @@ $(document).ready(function() {
         }
 
         saveHistoryToLocalStorage();
+        $('.excuse_delete').hover(
+            function () {
+                $(this).find('.excuse_deleteTop').addClass('delete-hover');
+            },
+            function () {
+                $(this).find('.excuse_deleteTop').removeClass('delete-hover');
+            }
+        ); 
     }
 
     
