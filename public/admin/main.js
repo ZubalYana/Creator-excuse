@@ -9,7 +9,7 @@ axios.get('http://localhost:3000/excuses')
                                         <div class="excuse_actions">
 
 
-                                        
+
                             <div class="excuse_delete excuse_action">
                                 <img src="./Imgs/bin top.png" alt="delete top" class="excuse_deleteTop">
                                 <img src="./Imgs/bin bottom.png" alt="delete bottom" id="${el._id}" class="deleteExcuse">
@@ -114,8 +114,8 @@ function changeTheme(theme){
         $('.header_notificationsCircle').css('background-color', '#000')
         $('.header_notificationsCircle').css('box-shadow', '0 0 1px 1px rgba(0, 0, 0, 0.72)')
         $('.menu_logo').attr('src', './Imgs/LogoLight.png')
-        $('#homePage').css('background-color', '#fff')
-        $('#adminPage').css('color', '#fff')
+        $('#homePage').css('background-color', '#F5A006')
+        $('#adminPage').css('color', '#F5A006')
         $('.menu_logo').attr('src', './Imgs/LogoLight.png')
         $('.personIcon').attr('src', './Imgs/person icon.png')
         $('.BoxThemeChanger').css('background-color', '#fff')
@@ -131,7 +131,7 @@ function changeTheme(theme){
         $('.header_notificationsCircle').css('background-color', '#fff')
         $('.header_notificationsCircle').css('box-shadow', 'rgba(255, 255, 255, 0.72)')
         $('.menu_logo').attr('src', './Imgs/LogoDark.png')
-        $('#homePage').css('background-color', '#000')
+        $('#homePage').css('background-color', ' #F5A006')
         $('#adminPage').css('color', '#000')
         $('.personIcon').attr('src', './Imgs/person icon dark.png')
         $('.BoxThemeChanger').css('background-color', '#000')
