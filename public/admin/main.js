@@ -66,8 +66,6 @@ $('#createExcuse').click(()=>{
 
 })
 
-
-
 //excuses editing
 $('.editExcuse').click((e)=>{
     $('.editExcusePopup').css('display', 'flex')
@@ -92,3 +90,46 @@ $('.editExcuse').click((e)=>{
     }
 })
 
+//theme changing
+let theme = localStorage.getItem('theme') || 'light';
+$('.themeChanger').click(function(){
+    if(theme == 'light'){
+        theme = 'dark';
+        localStorage.setItem('theme', theme);
+        changeTheme(theme);
+
+    }else{
+        theme = 'light';
+        localStorage.setItem('theme', theme);
+        changeTheme(theme);
+    }
+})
+function changeTheme(theme){
+    if(theme == 'light'){
+        $('.themeChanger').css('justify-content', 'flex-start')
+        $('.wrap').css('background-color', '#fff')
+        $('h3').css('color', '#000')
+        $('h4').css('color', '#000')
+        $('.homePage_notificationsCircle').css('background-color', '#000')
+        $('.homePage_notificationsCircle').css('box-shadow', '0 0 1px 1px rgba(0, 0, 0, 0.72)')
+        $('.menu_logo').attr('src', './Imgs/LogoLight.png')
+        $('#homePage').css('background-color', '#fff')
+        $('#adminPage').css('color', '#fff')
+        $('.menu_logo').attr('src', './Imgs/LogoLight.png')
+        $('.personIcon').attr('src', './Imgs/person icon.png')
+
+    }else{
+        $('.themeChanger').css('justify-content', 'flex-end')
+        $('.wrap').css('background-color', '#000')
+        $('h3').css('color', '#fff')
+        $('h4').css('color', '#fff')
+        $('.homePage_notificationsCircle').css('background-color', '#fff')
+        $('.homePage_notificationsCircle').css('box-shadow', 'rgba(255, 255, 255, 0.72)')
+        $('.menu_logo').attr('src', './Imgs/LogoDark.png')
+        $('#homePage').css('background-color', '#000')
+        $('#adminPage').css('color', '#000')
+        $('.personIcon').attr('src', './Imgs/person icon dark.png')
+
+    }
+}
+changeTheme(theme);
