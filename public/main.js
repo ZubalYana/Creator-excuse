@@ -106,3 +106,30 @@ $('.excuse_delete').hover(
         $(this).find('.excuse_deleteTop').removeClass('delete-hover');
     }
 ); 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const garButton = document.querySelector('.gar');
+    const settingsMenu = document.querySelector('.settingsMenu');
+
+    garButton.addEventListener('click', function() {
+        const menuVisible = settingsMenu.style.right === '0px';
+
+        if (!menuVisible) {
+            settingsMenu.style.right = '0px'; 
+        } else {
+            settingsMenu.style.right = '-336px'; 
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const settingsMenu = document.querySelector('.settingsMenu');
+    const garCloseIcon = document.querySelector('.garClose');
+
+
+    garCloseIcon.addEventListener('click', function() {
+        settingsMenu.style.right = '-336px'; 
+    });
+});

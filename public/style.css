@@ -100,7 +100,7 @@ a{
 
 .container{
     display: flex;
-    width: 1300px;
+    width: 100%;
     height: 100%;
     padding: 36px;
     flex-direction: column;
@@ -171,7 +171,7 @@ a{
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    padding-top: 20px;
+    padding-top: 55px;
     
 }
 .textCont h3 .highlighted-text{
@@ -185,12 +185,11 @@ color: #F5A006;
 }
 .textCont h3 {
         margin: 0; 
-        font-size: 26px;
+        font-size: 28px;
          line-height: 34px;
          font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-weight: 500;
-    text-align: center;
+    font-weight: 700;
     }
 
     .textCont h3 {
@@ -436,4 +435,66 @@ color: #F5A006;
 }
 .deleteExcuse{
     width: 30px;
+}
+.settingsMenu{
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: -336px;
+    width: 336px;
+    height: 100%;
+    background-color: #F5A006;
+    position: fixed;
+    transition: right 0.8s ease;
+    
+}
+.settingsMenuTop {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+}
+.garClose{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+height: 40px;
+}
+.settingsMenuCener{
+    width: 100%;
+    height: 60%;
+    display: flex;
+}
+.settingsMenuCenerTop{
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    padding-left: 15px;
+    width: 80%;
+    height: 8%;
+    justify-content: space-evenly;
+}
+.settingsMenuCenerTop img{
+    width: 23px;
+    height: 24px;
+}
+.settingsMenuCenerTop h2{
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+.settingsMenuCenerBottom{
+    display: flex;
+    width: 100%;
+    height: 92%;
+}
+.settingsMenuBottom{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    
 }
