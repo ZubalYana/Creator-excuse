@@ -124,10 +124,9 @@ function changeTheme(theme){
         $('.wrap').css('background-color', '#fff')
         $('h3').css('color', '#000')
         $('h4').css('color', '#000')
-
         $('.header_notificationsCircle').css('background-color', '#000')
         $('.header_notificationsCircle').css('box-shadow', '0 0 1px 1px rgba(0, 0, 0, 0.72)')
-
+        $('.menu_logo').attr('src', './Imgs/LogoLight.png')
     }else{
         $('.themeChanger').css('justify-content', 'flex-end')
         $('.wrap').css('background-color', '#000')
@@ -135,7 +134,7 @@ function changeTheme(theme){
         $('h4').css('color', '#fff')
         $('.header_notificationsCircle').css('background-color', '#fff')
         $('.header_notificationsCircle').css('box-shadow', 'rgba(255, 255, 255, 0.72)')
-
+        $('.menu_logo').attr('src', './Imgs/LogoDark.png')
     }
 }
 changeTheme(theme);
