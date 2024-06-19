@@ -416,3 +416,23 @@ color: #F5A006;
     line-height: 18px;
     color: #8C8C8C;
 }
+
+
+
+.excuse_deleteTop{
+    width: 30px;
+    top: 0;
+    transition: 0.5s ease;
+}
+.delete-hover{
+    transform: rotate(-20deg);
+    top: -5px;
+    left: -2px;
+}
+.excuse_delete{
+    display: flex;
+    flex-direction: column;
+}
+.deleteExcuse{
+    width: 30px;
+}

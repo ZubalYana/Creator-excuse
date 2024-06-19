@@ -28,7 +28,13 @@ $(document).ready(function() {
         let currentDate = getCurrentDate();
 
         let li = `<li> <div class="historyListLiLeft"> <h2>${excuse}</h2> </div> <div class="historyListLiCenter"><span class="excuseDate">${currentDate}</span> </div>
-        <div class="historyListLiLRight">  <button class="removeExcuse">Remove</button></div></li>`;
+        <div class="historyListLiLRight"> <div class="excuse_delete excuse_action">
+        <img src="./Imgs/bin top.png" alt="delete top" class="excuse_deleteTop">
+        <img src="./Imgs/bin bottom.png" alt="delete bottom" class="deleteExcuse">
+    </div>  </div>             
+        
+        
+        </li>`;
         
         historyList.prepend(li);
 
@@ -76,8 +82,27 @@ $(document).ready(function() {
     }
 
    
-    $('.historyList').on('click', '.removeExcuse', function() {
+    $('.historyList').on('click', '.deleteExcuse', function() {
         $(this).closest('li').remove(); 
         saveHistoryToLocalStorage();
     });
 });
+
+
+
+
+
+
+
+
+
+
+//hover animations
+$('.excuse_delete').hover(
+    function () {
+        $(this).find('.excuse_deleteTop').addClass('delete-hover');
+    },
+    function () {
+        $(this).find('.excuse_deleteTop').removeClass('delete-hover');
+    }
+); 
