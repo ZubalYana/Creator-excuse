@@ -7,9 +7,9 @@ axios.get('http://localhost:3000/excuses')
             `<div class="excuse">
                 <div class="excuseText">${el.excuse}</div>
                                         <div class="excuse_actions">
-                            <div class="excuse_edit excuse_action">
-                                <img src="./Imgs/edit action.png" alt="edit" class="edit_icon">
-                            </div>
+
+
+                                        
                             <div class="excuse_delete excuse_action">
                                 <img src="./Imgs/bin top.png" alt="delete top" class="excuse_deleteTop">
                                 <img src="./Imgs/bin bottom.png" alt="delete bottom" id="${el._id}" class="deleteExcuse">
