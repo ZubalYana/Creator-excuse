@@ -419,12 +419,13 @@ color: #F5A006;
 }
 .excuse_deleteTop{
     width: 25px;
-    top: 0;
+    top: 1px;
     transition: 0.5s ease;
+    position: absolute;
 }
 .delete-hover{
     transform: rotate(-20deg);
-    top: -10px;
+    top: -5px;
     left: -2px;
 }
 .excuse_delete{
@@ -434,6 +435,7 @@ color: #F5A006;
     flex-direction: column;
     justify-content: flex-end;
     cursor: pointer;
+    position: relative;
 }
 .deleteExcuse{
     width: 25px;
