@@ -5,7 +5,11 @@ axios.get('http://localhost:3000/excuses')
     for(let el of excuses){
         $('.excusesContainer').append(
             `<div class="excuse">
-                <div class="excuseText">${el.excuse}</div>
+                <div class="excuseTextCon">
+                                <div class="excuseText">${el.excuse}</div>
+                                <div class="excuseAuthor">${el.author}</div>
+                </div>
+
                                         <div class="excuse_actions">
 
                             <div class="excuse_edit excuse_action">
