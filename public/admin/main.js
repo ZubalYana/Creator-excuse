@@ -57,17 +57,22 @@ $('.deleteExcuse').click((e)=>{
 
 //new excuses adding
 $('#createExcuse').click(()=>{
-    let data = {
-        author: $('#author').val(),
-        excuse: $('#excuse').val(),
+    if($('#author').val() != '' && $('#excuse').val() != ''){
+        let data = {
+            author: $('#author').val(),
+            excuse: $('#excuse').val(),
+        }
+        axios.post('http://localhost:3000/add-excuse', data)
+        .then(()=>{
+            console.log(`Excuse data was sended successfully`)
+            $('#author').val()
+            $('#excuse').val()
+            location.reload();
+        })
+    }else{
+        alert('Fill in the info!')
     }
-    axios.post('http://localhost:3000/add-excuse', data)
-    .then(()=>{
-        console.log(`Excuse data was sended successfully`)
-        $('#author').val()
-        $('#excuse').val()
-        location.reload();
-    })
+
 
 })
 
