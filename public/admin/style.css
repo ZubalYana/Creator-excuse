@@ -215,6 +215,7 @@ textarea{
     justify-content: space-between;
     margin-top: 15px;
 }
+
 #createExcuse{
     width: 40px;
     height: 40px;
@@ -247,7 +248,7 @@ textarea{
 }
 .excuse{
     width: 98%;
-    height: 50px;
+    height: 60px;
     border-radius: 12px;
     background-color: #fff;
     border: 2px rgba(140, 140, 140, 0.78) solid;  
@@ -259,6 +260,10 @@ textarea{
     font-size: 13px;
     font-weight: 700;
     color: #8C8C8C;
+}
+.excuseAuthor{
+    font-weight: 500;
+    margin-top: 3px;
 }
 .excuse_action{
     width: 25px;
