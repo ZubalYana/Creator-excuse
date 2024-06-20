@@ -16,7 +16,7 @@ axios.get('http://localhost:3000/excuses')
                                         <div class="excuse_actions">
 
                             <div class="excuse_edit excuse_action">
-                                <img src="./Imgs/edit action.png" alt="edit" class="edit_icon">
+                                <img src="./Imgs/edit action.png" alt="edit" class="edit_icon" id="edit${el._id}">
                             </div>
                             <div class="excuse_delete excuse_action">
                                 <img src="./Imgs/bin top.png" alt="delete top" class="excuse_deleteTop">
@@ -85,10 +85,11 @@ $('#createExcuse').click(()=>{
 })
 
 //excuses editing
-$('.editExcuse').click((e)=>{
-    $('.editExcusePopup').css('display', 'flex')
-    $('#closeEditPopup').click(()=>{
-        $('.editExcusePopup').css('display', 'none')
+$('.edit_icon').click((e)=>{
+    alert('dfs')
+    $('.excusesEditingPopupCon').css('display', 'flex')
+    $('.editPopupxmark').click(()=>{
+        $('.excusesEditingPopupCon').css('display', 'none')
     })
     let ID = e.target.id;
     if (ID.substring(0, 4) == 'edit') {
@@ -101,7 +102,7 @@ $('.editExcuse').click((e)=>{
             };
             axios.put(`http://localhost:3000/edit-excuse/${ID}`, data)
                 .then(res => {
-                    $('.editExcusePopup').css('display', 'none')
+                    $('.excusesEditingPopupCon').css('display', 'none')
                     location.reload();
                 })
         })
