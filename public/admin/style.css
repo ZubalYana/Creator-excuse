@@ -201,6 +201,15 @@ textarea{
     margin-top: 15px;
     padding: 10px;
 }
+#author{
+    width: 492px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: #DDDDDD;
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px #000 solid;
+}
 #createExcuse{
     width: 40px;
     height: 40px;
