@@ -2,6 +2,9 @@
 axios.get('http://localhost:3000/excuses')
 .then((res)=>{
     let excuses = res.data;
+    let excusesLength = excuses.length;
+    console.log(excusesLength)
+    $('.exusesLength').html(`Список всіх відмазок ( ${excusesLength} )`);
     for(let el of excuses){
         $('.excusesContainer').append(
             `<div class="excuse">
