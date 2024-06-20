@@ -122,7 +122,6 @@ $('.themeChanger').click(function(){
         changeTheme(theme);
     }
 })
-
 function changeTheme(theme){
     if(theme == 'light'){
         $('.themeChanger').css('justify-content', 'flex-start')
