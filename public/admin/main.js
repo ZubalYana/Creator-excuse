@@ -70,7 +70,9 @@ $('#createExcuse').click(()=>{
             location.reload();
         })
     }else{
-        alert('Fill in the info!')
+        $('.errorMessage_con').css('display', 'flex')
+        $('.errorMessage').html('<i class="fa-solid fa-circle-exclamation explamationCircle"></i><p class="errorMessage_text">Заповніть необхідну інформацію!</p>')
+
     }
 
 

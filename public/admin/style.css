@@ -431,16 +431,24 @@ textarea{
     position: fixed;
     bottom: 25px;
     width: 100%;
-    display: flex;
+    display: none;
     justify-content: center;
 }
 .errorMessage{
-    width: 400px;
-    height: 30px;
+    width: 350px;
+    height: 50px;
     background-color: #fff;
     border: 1px #000 solid;
     border-radius: 6px;
-    padding: 6px;
+    padding: 12px;
     display: flex;
     align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #676767;
+}
+.explamationCircle{
+    color: #F5A006;
+    margin-right: 10px;
+    font-size: 24px;
 }
