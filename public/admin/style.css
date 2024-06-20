@@ -202,13 +202,18 @@ textarea{
     padding: 10px;
 }
 #author{
-    width: 492px;
+    width: 430px;
     height: 40px;
     border-radius: 12px;
     background-color: #DDDDDD;
-    margin-top: 15px;
     padding: 10px;
     border: 1px #000 solid;
+}
+.authorAddContainer{
+    width: 492px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
 }
 #createExcuse{
     width: 40px;
@@ -225,7 +230,6 @@ textarea{
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.72);  
     transition: 0.5s ease; 
     cursor: pointer;
-    margin-top: 10px;
 }
 #createExcuse:hover{
     background-color: #fff;
