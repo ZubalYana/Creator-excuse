@@ -427,3 +427,20 @@ textarea{
     flex-direction: column;
     padding-top: 140px;
 }
+.errorMessage_con{
+    position: fixed;
+    bottom: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.errorMessage{
+    width: 400px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px #000 solid;
+    border-radius: 6px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+}
