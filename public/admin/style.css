@@ -465,16 +465,44 @@ textarea{
 }
 .excusesEditingPopup{
     width: 700px;
-    height: 400px;
+    height: 300px;
     background-color: #fff;
     border-radius: 20px;
     position: relative;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 .editPopupxmark{
     font-size: 24px;
     position: absolute;
     top: 20px;
     right: 20px;
+    cursor: pointer;
+}
+#newExcuse{
+    width: 100%;
+    height: 150px;
+}
+#newAuthor{
+    width: 450px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: #DDDDDD;
+    padding: 10px;
+    border: 0.5px #000 solid;
+}
+.editAuthorBtnCon{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.acceptChanges{
+    height: 40px;
+    width: 190px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 12px;
     cursor: pointer;
 }
