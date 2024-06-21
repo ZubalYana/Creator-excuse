@@ -71,6 +71,7 @@ $('.edit_icon').click((e)=>{
         $('.acceptChanges').click(()=>{
             let data = {
                 excuse: $('#newExcuse').val(),
+                author: $('#author').val(),
             };
             axios.put(`http://localhost:3000/edit-excuse/${ID}`, data)
                 .then(res => {
