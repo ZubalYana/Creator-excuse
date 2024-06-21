@@ -56,6 +56,31 @@ $('.deleteExcuse').click((e)=>{
         location.reload()
     })
 })
+
+//excuses editing
+$('.edit_icon').click((e)=>{
+    $('.excusesEditingPopupCon').css('display', 'flex')
+    $('.editPopupxmark').click(()=>{
+        $('.excusesEditingPopupCon').css('display', 'none')
+    })
+    let ID = e.target.id;
+    if (ID.substring(0, 4) == 'edit') {
+        ID = ID.substring(4);
+        console.log(ID);
+
+        $('.acceptChanges').click(()=>{
+            let data = {
+                excuse: $('#newExcuse').val(),
+            };
+            axios.put(`http://localhost:3000/edit-excuse/${ID}`, data)
+                .then(res => {
+                    $('.excusesEditingPopupCon').css('display', 'none')
+                    location.reload();
+                })
+        })
+    }
+})
+
 })
 
 //new excuses adding
@@ -84,30 +109,7 @@ $('#createExcuse').click(()=>{
 
 })
 
-//excuses editing
-$('.edit_icon').click((e)=>{
-    alert('dfs')
-    $('.excusesEditingPopupCon').css('display', 'flex')
-    $('.editPopupxmark').click(()=>{
-        $('.excusesEditingPopupCon').css('display', 'none')
-    })
-    let ID = e.target.id;
-    if (ID.substring(0, 4) == 'edit') {
-        ID = ID.substring(4);
-        console.log(ID);
 
-        $('.acceptChanges').click(()=>{
-            let data = {
-                excuse: $('#newExcuse').val(),
-            };
-            axios.put(`http://localhost:3000/edit-excuse/${ID}`, data)
-                .then(res => {
-                    $('.excusesEditingPopupCon').css('display', 'none')
-                    location.reload();
-                })
-        })
-    }
-})
 
 //theme changing
 let theme = localStorage.getItem('theme') || 'light';
