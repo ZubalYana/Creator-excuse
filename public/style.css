@@ -577,3 +577,12 @@ height: 40px;
     font-size: 12px;
     margin-top: 1px;
 }
+.accountPage{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+}
