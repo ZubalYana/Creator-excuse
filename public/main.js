@@ -188,7 +188,6 @@ $('#SignIn').click(()=>{
     $('.logInCon').css('display', 'none')
     $('#SignIn').css('color', '#F5A006')
     $('#LogIn').css('color', '#000')
-
 })
 $('#LogIn').click(()=>{
     $('.logInCon').css('display', 'flex')
