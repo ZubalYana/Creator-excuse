@@ -101,7 +101,7 @@ a{
 
 .container{
     display: flex;
-    width: 1300px;
+    width: 90%;
     height: 100%;
     padding: 36px;
     flex-direction: column;
