@@ -671,6 +671,10 @@ height: 40px;
     font-size: 14px;
     font-weight: 500;
     margin-top: 30px;
+    transition: 0.5s ease;
+}
+.continueWithGoogle:hover{
+    background-color: #a4a4a4;
 }
 .google_logo{
     width: 29px;
@@ -690,6 +694,8 @@ height: 40px;
     text-shadow: 0.2px 0.2px 2px #000;
     cursor: pointer;
     margin-top: 30px;
+    transition: 0.5s ease;
+
 }
 #signInBtn:hover{
     background: #FFC700;
@@ -697,4 +703,18 @@ height: 40px;
 }
 #signInBtn:active {
     background: #D48800; 
+}
+.alreadyHaveAccount{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: 0.5s ease;
+
+}
+.alreadyHaveAccount:hover{
+    color: #FFC700;
 }
