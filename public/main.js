@@ -106,7 +106,6 @@ $(document).ready(function() {
     });
 });
 
-
 //theme changing
 let theme = localStorage.getItem('theme') || 'light';
 $('.themeChanger').click(function(){
@@ -121,10 +120,6 @@ $('.themeChanger').click(function(){
         changeTheme(theme);
     }
 }); 
-
-
-
-
 function changeTheme(theme){
     if(theme == 'light'){
         $('.themeChanger').css('justify-content', 'flex-start')
@@ -162,7 +157,6 @@ function changeTheme(theme){
 }
 changeTheme(theme);
 
-
 // settings menu
 document.addEventListener('DOMContentLoaded', function() {
     const garButton = document.querySelector('.gar');
@@ -178,8 +172,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-
 document.addEventListener('DOMContentLoaded', function() {
     const settingsMenu = document.querySelector('.settingsMenu');
     const garCloseIcon = document.querySelector('.garClose');

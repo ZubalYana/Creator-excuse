@@ -634,6 +634,14 @@ height: 40px;
 .pagesSlash{
     margin: 0 7px;
 }
+#LogIn{
+    color: #F5A006;
+    cursor: pointer;
+}
+#SignIn{
+    cursor: pointer;
+
+}
 .SignCon_inputCon, .logInCon_inputCon{
     width: 100%;
     margin: 20px 0;

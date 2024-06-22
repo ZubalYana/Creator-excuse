@@ -89,7 +89,6 @@ axios.get('http://localhost:3000/excuses')
     });
 });
 
-
 //new excuses adding
 $('#createExcuse').click(()=>{
     if($('#author').val() != '' && $('#excuse').val() != ''){
@@ -115,8 +114,6 @@ $('#createExcuse').click(()=>{
 
 
 })
-
-
 
 //theme changing
 let theme = localStorage.getItem('theme') || 'light';
@@ -169,12 +166,6 @@ function changeTheme(theme){
 }
 changeTheme(theme);
 
-
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
     const garButton = document.querySelector('.gar');
     const settingsMenu = document.querySelector('.settingsMenu');
@@ -190,12 +181,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
 document.addEventListener('DOMContentLoaded', function() {
     const settingsMenu = document.querySelector('.settingsMenu');
     const garCloseIcon = document.querySelector('.garClose');
-
-
     garCloseIcon.addEventListener('click', function() {
         settingsMenu.style.right = '-336px'; 
     });
