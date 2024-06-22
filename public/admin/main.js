@@ -9,54 +9,86 @@ axios.get('http://localhost:3000/excuses')
         $('.excusesContainer').append(
             `<div class="excuse">
                 <div class="excuseTextCon">
-                                <div class="excuseText">${el.excuse}</div>
-                                <div class="excuseAuthor">${el.author}</div>
+                    <div class="excuseText">${el.excuse}</div>
+                    <div class="excuseAuthor">${el.author}</div>
                 </div>
-
-                                        <div class="excuse_actions">
-
-                            <div class="excuse_edit excuse_action">
-                                <img src="./Imgs/edit action.png" alt="edit" class="edit_icon" id="edit${el._id}">
-                            </div>
-                            <div class="excuse_delete excuse_action">
-                                <img src="./Imgs/bin top.png" alt="delete top" class="excuse_deleteTop">
-                                <img src="./Imgs/bin bottom.png" alt="delete bottom" id="${el._id}" class="deleteExcuse">
-                            </div>
-                        </div>
+                <div class="excuse_actions">
+                    <div class="excuse_edit excuse_action">
+                        <img src="./Imgs/edit action.png" alt="edit" class="edit_icon" id="edit${el._id}">
+                    </div>
+                    <div class="excuse_delete excuse_action">
+                        <img src="./Imgs/bin top.png" alt="delete top" class="excuse_deleteTop">
+                        <img src="./Imgs/bin bottom.png" alt="delete bottom" id="${el._id}" class="deleteExcuse">
+                    </div>
+                </div>
             </div>`
         )
     }
 
+    //hover animations
+    $('.excuse_edit').hover(
+        function () {
+            $(this).css('transform', 'rotate(-20deg)');
+        },
+        function () {
+            $(this).css('transform', 'rotate(0deg)');
+        }
+    );
+    $('.excuse_delete').hover(
+        function () {
+            $(this).find('.excuse_deleteTop').addClass('delete-hover');
+        },
+        function () {
+            $(this).find('.excuse_deleteTop').removeClass('delete-hover');
+        }
+    );
 
-//hover animations
-$('.excuse_edit').hover(
-    function () {
-        $(this).css('transform', 'rotate(-20deg)');
-    },
-    function () {
-        $(this).css('transform', 'rotate(0deg)');
-    }
-);
-$('.excuse_delete').hover(
-    function () {
-        $(this).find('.excuse_deleteTop').addClass('delete-hover');
-    },
-    function () {
-        $(this).find('.excuse_deleteTop').removeClass('delete-hover');
-    }
-); 
-
-//excuses deleting
-$('.deleteExcuse').click((e)=>{
-    console.log(e.target)
-    let id = e.target.id;
-    console.log(id)
-    axios.delete(`http://localhost:3000/excuse/${id}`)
-    .then(res => {
-        location.reload()
+    //excuses deleting
+    $('.deleteExcuse').click((e)=>{
+        console.log(e.target)
+        let id = e.target.id;
+        console.log(id)
+        axios.delete(`http://localhost:3000/excuse/${id}`)
+        .then(res => {
+            location.reload()
+        })
     })
-})
-})
+
+    //excuses editing
+    $('.edit_icon').click((e)=>{
+        let ID = e.target.id;
+        if (ID.substring(0, 4) == 'edit') {
+            ID = ID.substring(4);
+            console.log(ID);
+
+            let excuseElement = $(`#edit${ID}`).closest('.excuse');
+            let currentExcuse = excuseElement.find('.excuseText').text();
+            let currentAuthor = excuseElement.find('.excuseAuthor').text();
+
+            $('#newExcuse').val(currentExcuse);
+            $('#newAuthor').val(currentAuthor);
+
+            $('.excusesEditingPopupCon').css('display', 'flex');
+            
+            $('.editPopupxmark').click(()=>{
+                $('.excusesEditingPopupCon').css('display', 'none');
+            });
+
+            $('.acceptChanges').click(()=>{
+                let data = {
+                    excuse: $('#newExcuse').val(),
+                    author: $('#newAuthor').val(),
+                };
+                axios.put(`http://localhost:3000/edit-excuse/${ID}`, data)
+                    .then(res => {
+                        $('.excusesEditingPopupCon').css('display', 'none');
+                        location.reload();
+                    })
+            });
+        }
+    });
+});
+
 
 //new excuses adding
 $('#createExcuse').click(()=>{
@@ -84,30 +116,7 @@ $('#createExcuse').click(()=>{
 
 })
 
-//excuses editing
-$('.edit_icon').click((e)=>{
-    alert('dfs')
-    $('.excusesEditingPopupCon').css('display', 'flex')
-    $('.editPopupxmark').click(()=>{
-        $('.excusesEditingPopupCon').css('display', 'none')
-    })
-    let ID = e.target.id;
-    if (ID.substring(0, 4) == 'edit') {
-        ID = ID.substring(4);
-        console.log(ID);
 
-        $('.acceptChanges').click(()=>{
-            let data = {
-                excuse: $('#newExcuse').val(),
-            };
-            axios.put(`http://localhost:3000/edit-excuse/${ID}`, data)
-                .then(res => {
-                    $('.excusesEditingPopupCon').css('display', 'none')
-                    location.reload();
-                })
-        })
-    }
-})
 
 //theme changing
 let theme = localStorage.getItem('theme') || 'light';
