@@ -620,4 +620,15 @@ height: 40px;
     position: absolute;
     right: 300px;
     z-index: 9999;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+.accountForm_pages{
+    display: flex;
+    font-size: 24px;
+    font-weight: 700;
+}
+.pagesSlash{
+    margin: 0 7px;
 }
