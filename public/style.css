@@ -630,18 +630,30 @@ height: 40px;
     font-size: 24px;
     font-weight: 700;
 }
+
 .pagesSlash{
     margin: 0 7px;
 }
-.logInCon_inputCon{
+.SignCon_inputCon{
     width: 100%;
 }
-.logInCon_inputCon_input{
+.SignCon_inputCon_input{
     width: 100%;
+    height: 35px;
+    background-color: rgba(137, 137, 137, 0.32);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    padding: 10px;
 }
 .accountForm_content{
     width: 100%;
 }
-.logInCon{
+.SignCon{
     width: 100%;
+}
+.SignCon_inputCon_text{
+    font-size: 16px;
+    font-weight: 700;
+    color: #989898;
 }
