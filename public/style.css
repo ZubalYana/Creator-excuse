@@ -644,7 +644,7 @@ height: 40px;
 }
 .SignCon_inputCon, .logInCon_inputCon{
     width: 100%;
-    margin: 20px 0;
+    margin: 13px 0;
 }
 .SignCon_inputCon_input, .logInCon_inputCon_input{
     width: 100%;
@@ -662,6 +662,12 @@ height: 40px;
 .SignInCon{
     width: 100%;
     display: none;
+    flex-direction: column;
+
+}
+.logInCon{
+    flex-direction: column;
+
 }
 .SignCon_inputCon_text, .logInCon_inputCon_text{
     font-size: 16px;

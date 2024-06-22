@@ -157,7 +157,7 @@ function changeTheme(theme){
 }
 changeTheme(theme);
 
-// settings menu
+//settings menu
 document.addEventListener('DOMContentLoaded', function() {
     const garButton = document.querySelector('.gar');
     const settingsMenu = document.querySelector('.settingsMenu');
@@ -181,3 +181,18 @@ document.addEventListener('DOMContentLoaded', function() {
         settingsMenu.style.right = '-336px'; 
     });
 });
+
+//account pages changing
+$('#SignIn').click(()=>{
+    $('.SignInCon').css('display', 'flex')
+    $('.logInCon').css('display', 'none')
+    $('#SignIn').css('color', '#F5A006')
+    $('#LogIn').css('color', '#000')
+
+})
+$('#LogIn').click(()=>{
+    $('.logInCon').css('display', 'flex')
+    $('.SignInCon').css('display', 'none')
+    $('#SignIn').css('color', '#000')
+    $('#LogIn').css('color', '#F5A006')
+})
