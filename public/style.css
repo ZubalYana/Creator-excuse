@@ -17,7 +17,7 @@
     justify-content: space-between;
 }
 .menu{
-    width: 195px;
+    width: 13%;
     height: 100%;
     background-color: #F5A006;
     border-radius: 0 37px 0 0;
@@ -101,7 +101,7 @@ a{
 
 .container{
     display: flex;
-    width: 100%;
+    width: 87%;
     height: 100%;
     padding: 36px;
     flex-direction: column;
