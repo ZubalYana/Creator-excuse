@@ -253,3 +253,28 @@ $('#LogIn').click(()=>{
     $('#SignIn').css('color', '#000')
     $('#LogIn').css('color', '#F5A006')
 })
+
+//signing in
+$('#signInBtn').click(() => {
+    if ($('#Sign_name').val() !== '' && $('#Sign_email').val() !== '' && $('#Sign_password').val() !== '') {
+        let data = {
+            name: $('#Sign_name').val(),
+            email: $('#Sign_email').val(),
+            password: $('#Sign_password').val()
+        };
+        axios.post('http://localhost:3000/create-account', data)
+            .then((response) => {
+                $('#Sign_name').val('');
+                $('#Sign_email').val('');
+                $('#Sign_password').val('');
+                alert('Account created successfully!');
+                location.reload();
+            })
+            .catch((error) => {
+                console.error('Error creating account:', error);
+                alert('Failed to create account. Please try again.');
+            });
+    } else {
+        alert('Fill in the inputs');
+    }
+});

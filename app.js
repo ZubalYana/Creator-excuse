@@ -20,7 +20,13 @@ const excuseSchema = new mongoose.Schema({
     author: String,
     excuse: String,
 });
+const accountSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    password: String,
+});
 const Excuses = mongoose.model('Excuses', excuseSchema);
+const Accounts = mongoose.model('Accounts', accountSchema);
 
 //new excuses creating
 app.post('/add-excuse', async (req, res) => {
@@ -72,9 +78,31 @@ app.put('/edit-excuse/:id', async (req, res) => {
     }
 })
 
+//account creating
+app.post('/create-account', async (req, res) => {
+    console.log(req.body);
+    try {
+        const { name, email, password } = req.body;
+        const accounts = new Accounts({ name, email, password });
+        await accounts.save();
+        console.log('Account created');
+        res.status(201).json(accounts);
+    } catch (err) {
+        console.error('Error creating account:', err);
+        res.status(500).json({ message: err.message });
+    }
+});
 
-
-
+//get all the accounts
+app.get('/accounts', async (req, res)=>{
+    try {
+        const accounts = await Accounts.find();
+        res.json(accounts);
+    } catch (err) {
+        console.error('Error retrieving accounts:', err);
+        res.status(500).json({ message: err.message });
+    }
+});
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
