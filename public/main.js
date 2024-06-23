@@ -197,3 +197,25 @@ $('#LogIn').click(()=>{
 })
 
 //singing in
+$('#signInBtn').click(()=>{
+    if($('#Sign_name').val() != '' && $('#Sign_email').val() != '' && $('#Sign_password').val() != ''){
+        let data = {
+            name: $('#Sign_name').val(),
+            email: $('#Sign_email').val(),
+            password: $('#Sign_password').val(),
+
+        }
+        axios.post('http://localhost:3000/create-account', data)
+        .then(()=>{
+            console.log(`Account data was sended successfully`)
+            $('#Sign_name').val()
+            $('#Sign_email').val()
+            $('#Sign_password').val()
+            location.reload();
+        })
+    }else{
+        console.log('Fill in the inputs')
+    }
+
+
+})
