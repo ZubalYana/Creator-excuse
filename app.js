@@ -93,6 +93,17 @@ app.post('/create-account', async (req, res) => {
     }
 });
 
+//get all the accounts
+app.get('/accounts', async (req, res)=>{
+    try {
+        const accounts = await Accounts.find();
+        res.json(accounts);
+    } catch (err) {
+        console.error('Error retrieving accounts:', err);
+        res.status(500).json({ message: err.message });
+    }
+});
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
