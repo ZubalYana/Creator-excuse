@@ -78,6 +78,19 @@ app.put('/edit-excuse/:id', async (req, res) => {
     }
 })
 
+//account creating
+app.post('/create-account', async (req, res) => {
+    console.log(req.body);
+    try {
+        const { name, email, password } = req.body;
+        const accounts = new Accounts({ name, email, password });
+        await accounts.save();
+        console.log(`Account created`);
+        res.status(201).json(accounts);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
