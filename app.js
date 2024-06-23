@@ -20,7 +20,13 @@ const excuseSchema = new mongoose.Schema({
     author: String,
     excuse: String,
 });
+const accountSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    password: String,
+});
 const Excuses = mongoose.model('Excuses', excuseSchema);
+const Accounts = mongoose.model('Accounts', accountSchema);
 
 //new excuses creating
 app.post('/add-excuse', async (req, res) => {
@@ -71,9 +77,6 @@ app.put('/edit-excuse/:id', async (req, res) => {
         res.status(500).json({ message: err })
     }
 })
-
-
-
 
 
 app.use(express.static(path.join(__dirname, 'public')));

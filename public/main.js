@@ -195,3 +195,5 @@ $('#LogIn').click(()=>{
     $('#SignIn').css('color', '#000')
     $('#LogIn').css('color', '#F5A006')
 })
+
+//singing in
