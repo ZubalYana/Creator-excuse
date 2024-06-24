@@ -282,13 +282,20 @@ $('#signInBtn').click(() => {
 //logging in
 $('#logInBtn').click(() => {
     axios.get('http://localhost:3000/accounts')
-    .then((res)=>{
-        console.log(res.data)
-        // if ($('#Sign_name').val() !== '' && $('#Sign_email').val() !== '' && $('#Sign_password').val() !== '') {
-        // } else {
-        //     alert('No such account found');
-        // }
+    .then((res) => {
+        console.log(res.data);
+        const email = $('#logIn_email').val();
+        const password = $('#logIn_password').val();
+        const account = res.data.find(acc => acc.email === email && acc.password === password);
+
+        if (account) {
+            alert('Login successful');
+        } else {
+            alert('No such account found');
+        }
     })
-
-
+    .catch((err) => {
+        console.error('Error fetching accounts:', err);
+        alert('Error logging in. Please try again.');
+    });
 });
