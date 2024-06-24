@@ -314,6 +314,7 @@ $('#logInBtn').click(() => {
                 alert('No such account found');
             }
         }else{
+            alert('Fill in the inputs!')
         }
 
     })
