@@ -279,7 +279,6 @@ $('#signInBtn').click(() => {
     }
 });
 
-//logging in
 $('#logInBtn').click(() => {
     axios.get('http://localhost:3000/accounts')
     .then((res) => {
@@ -290,8 +289,11 @@ $('#logInBtn').click(() => {
 
         if (account) {
             Cookies.set('loggedIn', 'true', { expires: 1 });
+            Cookies.set('name', account.name, { expires: 1 });
+            Cookies.set('email', account.email, { expires: 1 });
+
             alert('Login successful');
-            checkLoginStatus();
+            displayAccountData();
         } else {
             alert('No such account found');
         }
@@ -302,22 +304,29 @@ $('#logInBtn').click(() => {
     });
 });
 
-//check login status
-function checkLoginStatus() {
+function displayAccountData() {
     if (Cookies.get('loggedIn') === 'true') {
+        const name = Cookies.get('name');
+        const email = Cookies.get('email');
+        
+        $('.menu_logIn_nickName').text(name);
+        $('.menu_logIn_gmail').text(email);
         $('.accountPage').hide();
     } else {
+        $('.menu_logIn_nickName').text('');
+        $('.menu_logIn_gmail').text('');
         $('.accountPage').show();
     }
 }
 
-//run checkLoginStatus on page load
 $(document).ready(() => {
-    checkLoginStatus();
+    displayAccountData();
 });
 
 //log out function
 $('#logOutBtn').click(() => {
     Cookies.remove('loggedIn');
-    checkLoginStatus();
+    Cookies.remove('name');
+    Cookies.remove('email');
+    displayAccountData();
 });
