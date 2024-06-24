@@ -220,3 +220,17 @@ $('#signInBtn').click(() => {
         alert('Fill in the inputs');
     }
 });
+
+//logging in
+$('#logInBtn').click(() => {
+    axios.get('http://localhost:3000/accounts')
+    .then((res)=>{
+        console.log(res.data)
+        // if ($('#Sign_name').val() !== '' && $('#Sign_email').val() !== '' && $('#Sign_password').val() !== '') {
+        // } else {
+        //     alert('No such account found');
+        // }
+    })
+
+
+});
