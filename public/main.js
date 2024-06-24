@@ -315,3 +315,9 @@ function checkLoginStatus() {
 $(document).ready(() => {
     checkLoginStatus();
 });
+
+//log out function
+$('#logOutBtn').click(() => {
+    Cookies.remove('loggedIn');
+    checkLoginStatus();
+});
