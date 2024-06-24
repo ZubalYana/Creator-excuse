@@ -289,9 +289,9 @@ $('#logInBtn').click(() => {
         const account = res.data.find(acc => acc.email === email && acc.password === password);
 
         if (account) {
-            Cookies.set('loggedIn', 'true', { expires: 1 }); // Expires in 1 day
+            Cookies.set('loggedIn', 'true', { expires: 1 });
             alert('Login successful');
-            checkLoginStatus(); // Immediately check the login status to hide the element
+            checkLoginStatus();
         } else {
             alert('No such account found');
         }
@@ -302,7 +302,7 @@ $('#logInBtn').click(() => {
     });
 });
 
-// Function to check login status and hide .accountPage if logged in
+//check login status
 function checkLoginStatus() {
     if (Cookies.get('loggedIn') === 'true') {
         $('.accountPage').hide();
@@ -311,7 +311,7 @@ function checkLoginStatus() {
     }
 }
 
-// Run checkLoginStatus on page load
+//run checkLoginStatus on page load
 $(document).ready(() => {
     checkLoginStatus();
 });
