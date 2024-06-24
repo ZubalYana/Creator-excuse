@@ -38,12 +38,29 @@ $(document).ready(function() {
             $(this).find('.excuse_deleteTop').removeClass('delete-hover');
         }
     ); 
+
+    $('.historyList').on('click', '.bookmarkBtm', function(event) {
+        event.stopPropagation();
+
+        let excuseText = $(this).closest('li').find('.historyListLiLeft h2').text();
+
+
+        $(this).html('<i class="fa-solid fa-bookmark fa-2xl" style="color: #F5A006;"></i>');
+
+
+        addToBookmarks(excuseText);
+
+        displayBookmarks();
+    });
+
+
     function addToHistory(excuse) {
         let historyList = $('.historyList');
         let currentDate = getCurrentDate();
 
         let li = `<li> <div class="historyListLiLeft"> <h2>${excuse}</h2> </div> <div class="historyListLiCenter"><span class="excuseDate">${currentDate}</span> </div>
-        <div class="historyListLiLRight"> <div class="excuse_delete excuse_action">
+        <div class="historyListLiLRight"> <div class="bookmarkBtm"><i class="fa-regular fa-bookmark fa-2xl" style="color: #F5A006;"></i> </div> <div class="excuse_delete excuse_action">
+        
         <img src="./Imgs/bin top.png" alt="delete top" class="excuse_deleteTop">
         <img src="./Imgs/bin bottom.png" alt="delete bottom" class="deleteExcuse">
     </div>  </div>             
@@ -104,6 +121,47 @@ $(document).ready(function() {
         $(this).closest('li').remove(); 
         saveHistoryToLocalStorage();
     });
+
+
+
+// the function of adding bookmarks
+
+    function addToBookmarks(excuse) {
+        let bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
+        bookmarks.push(excuse);
+        localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+    }
+
+    function displayBookmarks() {
+        let bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
+        let bookmarksList = $('.bookmarks');
+    
+        bookmarksList.empty(); 
+    
+        bookmarks.forEach(function(excuse, index) {
+            let li = `<li>${excuse} <button class="deleteBookmark" data-index="${index}">Delete</button></li>`;
+            bookmarksList.append(li); 
+        });
+
+    }
+
+    $('.bookmarks').on('click', '.deleteBookmark', function() {
+        let index = $(this).data('index');
+        removeBookmark(index);
+        displayBookmarks();
+    });
+    
+    function removeBookmark(index) {
+        let bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
+        if (index >= 0 && index < bookmarks.length) {
+            bookmarks.splice(index, 1);
+            localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+        }
+    }
+
+    displayBookmarks();
+
+    
 });
 
 //theme changing
