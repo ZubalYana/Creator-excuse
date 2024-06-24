@@ -289,7 +289,9 @@ $('#logInBtn').click(() => {
         const account = res.data.find(acc => acc.email === email && acc.password === password);
 
         if (account) {
+            Cookies.set('loggedIn', 'true', { expires: 1 }); // Expires in 1 day
             alert('Login successful');
+            checkLoginStatus(); // Immediately check the login status to hide the element
         } else {
             alert('No such account found');
         }
@@ -298,4 +300,18 @@ $('#logInBtn').click(() => {
         console.error('Error fetching accounts:', err);
         alert('Error logging in. Please try again.');
     });
+});
+
+// Function to check login status and hide .accountPage if logged in
+function checkLoginStatus() {
+    if (Cookies.get('loggedIn') === 'true') {
+        $('.accountPage').hide();
+    } else {
+        $('.accountPage').show();
+    }
+}
+
+// Run checkLoginStatus on page load
+$(document).ready(() => {
+    checkLoginStatus();
 });
