@@ -253,6 +253,18 @@ $('#LogIn').click(()=>{
     $('#SignIn').css('color', '#000')
     $('#LogIn').css('color', '#F5A006')
 })
+$('.createAnAccount').click(()=>{
+    $('.SignInCon').css('display', 'flex')
+    $('.logInCon').css('display', 'none')
+    $('#SignIn').css('color', '#F5A006')
+    $('#LogIn').css('color', '#000')
+})
+$('.alreadyHaveAccount').click(()=>{
+    $('.logInCon').css('display', 'flex')
+    $('.SignInCon').css('display', 'none')
+    $('#SignIn').css('color', '#000')
+    $('#LogIn').css('color', '#F5A006')
+})
 
 //signing in
 $('#signInBtn').click(() => {
