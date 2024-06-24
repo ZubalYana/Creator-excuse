@@ -291,6 +291,7 @@ $('#signInBtn').click(() => {
     }
 });
 
+//logging in
 $('#logInBtn').click(() => {
     axios.get('http://localhost:3000/accounts')
     .then((res) => {
@@ -304,8 +305,10 @@ $('#logInBtn').click(() => {
             Cookies.set('name', account.name, { expires: 1 });
             Cookies.set('email', account.email, { expires: 1 });
 
-            alert('Login successful');
             displayAccountData();
+            $('#logIn_email').val('')
+            $('#logIn_password').val('')
+
         } else {
             alert('No such account found');
         }
@@ -315,7 +318,6 @@ $('#logInBtn').click(() => {
         alert('Error logging in. Please try again.');
     });
 });
-
 function displayAccountData() {
     if (Cookies.get('loggedIn') === 'true') {
         const name = Cookies.get('name');
@@ -330,7 +332,6 @@ function displayAccountData() {
         $('.accountPage').show();
     }
 }
-
 $(document).ready(() => {
     displayAccountData();
 });
