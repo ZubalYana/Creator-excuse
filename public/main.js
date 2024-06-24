@@ -296,22 +296,26 @@ $('#logInBtn').click(() => {
     axios.get('http://localhost:3000/accounts')
     .then((res) => {
         console.log(res.data);
-        const email = $('#logIn_email').val();
-        const password = $('#logIn_password').val();
-        const account = res.data.find(acc => acc.email === email && acc.password === password);
-
-        if (account) {
-            Cookies.set('loggedIn', 'true', { expires: 1 });
-            Cookies.set('name', account.name, { expires: 1 });
-            Cookies.set('email', account.email, { expires: 1 });
-
-            displayAccountData();
-            $('#logIn_email').val('')
-            $('#logIn_password').val('')
-
-        } else {
-            alert('No such account found');
+        if($('#logIn_email').val() !== '' && $('#logIn_password').val() !== ''){
+            const email = $('#logIn_email').val();
+            const password = $('#logIn_password').val();
+            const account = res.data.find(acc => acc.email === email && acc.password === password);
+    
+            if (account) {
+                Cookies.set('loggedIn', 'true', { expires: 1 });
+                Cookies.set('name', account.name, { expires: 1 });
+                Cookies.set('email', account.email, { expires: 1 });
+    
+                displayAccountData();
+                $('#logIn_email').val('')
+                $('#logIn_password').val('')
+    
+            } else {
+                alert('No such account found');
+            }
+        }else{
         }
+
     })
     .catch((err) => {
         console.error('Error fetching accounts:', err);
