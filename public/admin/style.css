@@ -415,6 +415,9 @@ textarea{
     display: flex;
     width: 100%;
     height: 92%;
+    justify-content: center;
+    align-items: center;
+
 }
 .settingsMenuBottom{
     width: 100%;
