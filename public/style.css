@@ -201,7 +201,7 @@ color: #F5A006;
 
     .excuseScreen {
         width: 76%; 
-        height: 45%;
+        height: 25%;
         margin: 0 auto; 
         padding: 20px;
         background-color: #DDDDDD;
@@ -348,13 +348,17 @@ color: #F5A006;
     height: 28px;
     box-shadow:1px 1px 4px 4px #00000025;
   }
-
-.historyList{
-    padding-top: 19%;
+.LostExcuse{
+    width: 100%;
 }
-
+.historyList{
+    width: 100%;
+    height: 240px;
+    margin-top: 30px;
+    overflow: auto;
+}
 .historyList li{
-    width: 1260px;
+    width: 96%;
     height: 58px;
     border-radius: 15px;
     margin: 10px;
@@ -385,18 +389,7 @@ color: #F5A006;
     width: 15%;
     height: 100%;
 }
-.lastExcuses{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 240px;
-    margin-top: 30px;
-    overflow: auto;
-    padding-top: 70px;
-    margin-bottom: 15px;
-}
+
 ::-webkit-scrollbar-thumb{
     background: orange; 
  }
