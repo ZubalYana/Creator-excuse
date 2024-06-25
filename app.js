@@ -19,6 +19,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 const excuseSchema = new mongoose.Schema({
     author: String,
     excuse: String,
+    rating: { type: Number, default: 0 } 
 });
 const accountSchema = new mongoose.Schema({
     name: String,
