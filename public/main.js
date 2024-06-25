@@ -68,7 +68,7 @@ $(document).ready(function() {
         
         </li>`;
         
-        historyList.prepend(li);
+        historyList.append(li);
 
         if (historyList.children().length > 10) {
             historyList.children().last().remove();
