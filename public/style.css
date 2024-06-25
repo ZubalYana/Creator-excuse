@@ -785,8 +785,6 @@ height: 40px;
     align-items: center;
     background-color: #F5A006;
     overflow-y: auto;
-    left: 1000px;
-    top: 250px;
     color: #FFFFFF;
     border-radius: 25px;
 }
@@ -798,9 +796,14 @@ height: 40px;
 .bookmarkListTop{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding-left: 40%;
+    padding-right: 5%;
     width: 100%;
     height: 10%;
+}
+.bookmarkListTop i{
+    cursor: pointer;
 }
 .bookmarkListBottom{
     display: flex;
@@ -874,4 +877,12 @@ height: 40px;
     padding-left: 10px;
     justify-content: space-between;
     align-items: center;
+}
+.bookmarkListBox{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
 }

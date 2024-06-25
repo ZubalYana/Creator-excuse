@@ -348,3 +348,22 @@ $('#logOutBtn').click(() => {
     Cookies.remove('email');
     displayAccountData();
 });
+
+
+
+
+
+
+
+$('.saveMenu').click(()=>{
+    $('.bookmarkList').css('display', 'flex')
+})
+$('.closeBookmarkList').click(()=>{
+    $('.bookmarkList').css('display', 'none')
+})
+$('.saveMenu').click(()=>{
+    $('.bookmarkListBox').css('display', 'flex')
+})
+$('.closeBookmarkList').click(()=>{
+    $('.bookmarkListBox').css('display', 'none')
+})
