@@ -816,7 +816,7 @@ height: 40px;
 .bookmarks li{
     display: flex;
     justify-content: space-between;
-    width: 550px;
+    width: 560px;
     min-height: 30px;
     max-height: 160px;
     font-family: monospace;
@@ -825,6 +825,8 @@ height: 40px;
     border-radius: 20px;
     border: 2px #333 solid;
     align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
 }
 .deleteBookmark{
     width: 15%;
