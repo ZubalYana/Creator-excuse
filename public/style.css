@@ -355,7 +355,9 @@ color: #F5A006;
     width: 100%;
     height: 240px;
     margin-top: 30px;
-    overflow: auto;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: darkgray lightgray; 
 }
 
 .historyList li{
@@ -788,6 +790,7 @@ height: 40px;
     overflow-y: auto;
     color: #FFFFFF;
     border-radius: 25px;
+    scrollbar-width: none; 
 }
 .historyListLiLRight{
     display: flex;
