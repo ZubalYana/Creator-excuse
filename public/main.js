@@ -139,7 +139,7 @@ $(document).ready(function() {
         bookmarksList.empty(); 
     
         bookmarks.forEach(function(excuse, index) {
-            let li = `<li>${excuse} <button class="deleteBookmark" data-index="${index}">Delete</button></li>`;
+            let li = `<li>${excuse}<i class="fa-solid fa-trash-can deleteBookmark"  data-index="${index}"></i></li>`;
             bookmarksList.append(li); 
         });
 
