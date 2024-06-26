@@ -367,7 +367,7 @@ $('.showPassword').click(function() {
 
 //telegram bot navigation
 $('.evaluate').click(function() {
-    window.location.href = 'https://t.me/CreatorExcuseBot';
+    window.open('https://t.me/CreatorExcuseBot', '_blank');
 });
 
 
