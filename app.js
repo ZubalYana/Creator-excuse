@@ -4,6 +4,10 @@ const path = require('path')
 const app = express();
 const mongoose = require('mongoose')
 const dotenv = require('dotenv');
+const TelegramBot = require('node-telegram-bot-api');
+const TOKEN = process.env.TOKEN;
+const bot = new TelegramBot(TOKEN, { polling: false });
+
 dotenv.config();
 
 app.use(express.json());
