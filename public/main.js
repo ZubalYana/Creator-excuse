@@ -365,6 +365,11 @@ $('.showPassword').click(function() {
 });
 
 
+//telegram bot navigation
+$('.evaluate').click(function() {
+    window.location.href = 'https://t.me/CreatorExcuseBot';
+});
+
 
 $('.saveMenu').click(()=>{
     $('.bookmarkList').css('display', 'flex')
