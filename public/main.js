@@ -378,3 +378,50 @@ $('.saveMenu').click(()=>{
 $('.closeBookmarkList').click(()=>{
     $('.bookmarkListBox').css('display', 'none')
 })
+
+
+
+
+
+
+
+
+
+
+
+//   translator from google
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'ua', 
+        autoDisplay: false
+    }, 'google_translate_element');
+}
+
+
+function loadGoogleTranslateAPI() {
+    var script = document.createElement('script');
+    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    script.async = true;
+    document.head.appendChild(script);
+}
+
+
+
+
+
+document.getElementById('language_select').addEventListener('change', function() {
+    var selectedLanguage = this.value;
+    changeWebsiteLanguage(selectedLanguage);
+});
+
+
+window.onload = function() {
+    loadGoogleTranslateAPI();
+    var savedLanguage = getSelectedLanguage();
+    document.getElementById('language_select').value = savedLanguage;
+    changeWebsiteLanguage(savedLanguage);
+};
+
+
+
+
