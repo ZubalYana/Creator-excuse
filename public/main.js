@@ -330,11 +330,11 @@ function displayAccountData() {
         
         $('.menu_logIn_nickName').text(name);
         $('.menu_logIn_gmail').text(email);
-        $('.accountPage').hide();
+        $('.accountPage').css('display', 'none');
     } else {
         $('.menu_logIn_nickName').text('');
         $('.menu_logIn_gmail').text('');
-        $('.accountPage').show();
+        $('.accountPage').css('display', 'flex');
     }
 }
 $(document).ready(() => {
