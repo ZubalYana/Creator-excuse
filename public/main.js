@@ -426,7 +426,3 @@ window.onload = function() {
     document.getElementById('language_select').value = savedLanguage;
     changeWebsiteLanguage(savedLanguage);
 };
-
-
-
-

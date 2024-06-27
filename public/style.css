@@ -53,14 +53,31 @@
 a{
     text-decoration: none;
 }
-#homePage{
+#homePage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
     background-color: #fff;
     color: #F5A006;
     margin-bottom: 16px;
 }
+#homePage h2{
+    font-size: 19px;
+} 
 #adminPage{
     color: #fff;
 }
+#adminPage{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    color: #fff;
+}
+#adminPage h2{
+    font-size: 19px;
+} 
 .menu_logIn{
     width: 145px;
     height: 103px;

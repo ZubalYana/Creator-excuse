@@ -1,0 +1,142 @@
+@media (max-width: 400px) {
+    .menu{
+        width: 25%;
+        height: 100%;
+        padding-top: 24px;
+    }
+    .menu_logo{
+        width: 56px;
+        height: 52px;
+    }
+    .menu_pages{
+        width: 100%;
+        padding-left: 30px;
+        margin-top: 60px;
+    }
+    #homePage h2{
+        display: none;
+    }
+    #adminPage h2{
+        display: none;
+    } 
+    .menu_logIn{
+        width: 85px;
+        height: 63px;
+        padding: 8px;
+        margin-top: 410px;
+    }
+    .logInIcon{
+        width: 22px;
+        height: 22px;
+    }
+    .menu_logIn_gmail{
+        display: none;
+    }
+    .logOutIcon{
+        width: 14px;
+        height: 12px;
+    }
+    .container{
+        width: 65%;
+        padding: 15;
+    }
+    .header_title{
+
+        font-size: 20px;
+        font-weight: 600;
+  }
+  .title_home{
+    display: none;
+}
+.header_con{
+    width: 80px;
+}
+.header_notifications{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+}
+.bell{
+    width: 20px;
+    height: 24px;
+}
+.header_notificationsCircle{
+    width: 9px;
+    height: 9px;
+    top: -2px;
+    right: 3px;
+}
+.header_settings{
+    width: 26px;
+    height: 26px;
+}
+.gar{
+    width: 21px;
+    height: 21px;
+}
+.textCont h3 {
+    margin: 0; 
+    font-size: 16px;
+     line-height: 18px;
+     font-family: 'Montserrat', sans-serif;
+font-style: normal;
+font-weight: 600;
+}
+.textCont{
+    display: none;
+}
+.excuseScreen {
+    width: 96%; 
+    height: 20%;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+    margin-top: 40px;
+}
+.generate {
+    width: 120px;
+    height: 31px;
+    left: 600.45px;
+    top: 398px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px; 
+}
+.buttonCont{
+    width: 92.5%;
+    display: flex;
+    justify-content: center;
+}
+
+.rating{
+    display: none;
+}
+.historyList{
+    width: 135%;
+    height: 100%;
+    margin-top: 30px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: darkgray lightgray; 
+    margin-left: -25px;
+}
+.historyListLiLeft h2{
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+}
+.historyListLiLeft {
+    width:83%;
+    padding-right: 2px;
+}
+.historyListLiCenter{
+    width: 25%;
+    display: none;
+}
+.excuseDate{
+    display: none;
+}
+}
