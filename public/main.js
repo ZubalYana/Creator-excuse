@@ -30,6 +30,9 @@ $(document).ready(function() {
             console.error('Error fetching excuses:', error);
         });
     });
+
+
+
     $('.excuse_delete').hover(
         function () {
             $(this).find('.excuse_deleteTop').addClass('delete-hover');
@@ -53,39 +56,38 @@ $(document).ready(function() {
         displayBookmarks();
     });
 
-
     function addToHistory(excuse) {
         let historyList = $('.historyList');
         let currentDate = getCurrentDate();
-
+    
         let li = `<li> <div class="historyListLiLeft"> <h2>${excuse}</h2> </div> <div class="historyListLiCenter"><span class="excuseDate">${currentDate}</span> </div>
         <div class="historyListLiLRight"> <div class="bookmarkBtm"><i class="fa-regular fa-bookmark fa-2xl" style="color: #F5A006;"></i> </div> <div class="excuse_delete excuse_action">
         
         <img src="./Imgs/bin top.png" alt="delete top" class="excuse_deleteTop">
         <img src="./Imgs/bin bottom.png" alt="delete bottom" class="deleteExcuse">
-    </div>  </div>             
-        
-        
-        </li>`;
-        
-        historyList.append(li);
-
+        </div> </div> </li>`;
+    
+        historyList.prepend(li); 
+    
         if (historyList.children().length > 10) {
             historyList.children().last().remove();
         }
-
+    
         saveHistoryToLocalStorage();
     }
-
     
-    function saveHistoryToLocalStorage() {
-        let historyItems = [];
-        $('.historyList li').each(function() {
-            historyItems.push($(this).html());
-        });
+    
+function saveHistoryToLocalStorage() {
+    let historyItems = [];
+    $('.historyList li').each(function() {
+        let excuse = $(this).find('.historyListLiLeft h2').text();
+        let date = $(this).find('.excuseDate').text();
+        historyItems.push({ excuse: excuse, date: date });
+    });
 
-        localStorage.setItem('excuseHistory', JSON.stringify(historyItems));
-    }
+    localStorage.setItem('excuseHistory', JSON.stringify(historyItems));
+}
+
 
    
     function getCurrentDate() {
@@ -105,23 +107,25 @@ $(document).ready(function() {
         if (savedHistory) {
             let historyList = $('.historyList');
             let historyItems = JSON.parse(savedHistory);
+            historyList.empty(); // Clear existing historyList before appending
+    
             historyItems.forEach(function(item) {
-                historyList.append(`<li>${item}</li>`);
+                let li = `<li><div class="historyListLiLeft"><h2>${item.excuse}</h2></div><div class="historyListLiCenter"><span class="excuseDate">${item.date}</span></div><div class="historyListLiLRight"><div class="bookmarkBtm"><i class="fa-regular fa-bookmark fa-2xl" style="color: #F5A006;"></i></div><div class="excuse_delete excuse_action"><img src="./Imgs/bin top.png" alt="delete top" class="excuse_deleteTop"><img src="./Imgs/bin bottom.png" alt="delete bottom" class="deleteExcuse"></div></div></li>`;
+                historyList.append(li);
             });
-
-            
+    
+            // Remove excess history items if more than 10
             while (historyList.children().length > 10) {
-                historyList.children().last().remove();
+                historyList.children().first().remove();
             }
         }
     }
 
-   
     $('.historyList').on('click', '.deleteExcuse', function() {
-        $(this).closest('li').remove(); 
+        $(this).closest('li').remove();
         saveHistoryToLocalStorage();
     });
-
+    
 
 
 // the function of adding bookmarks

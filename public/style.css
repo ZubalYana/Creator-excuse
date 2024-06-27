@@ -292,9 +292,16 @@ color: #F5A006;
 
 
 
-
-
-
+.ratingBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190.44px;
+}
+.ratingBox img{
+   height: 45px;
+   cursor: pointer;
+}
 .rating {
     display: flex;
     flex-direction: column;
@@ -859,7 +866,7 @@ height: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 280px;
+    width: 83%;
     height: 40px;
     border-radius: 25px;
     background-color: #FFFFFF;
@@ -871,7 +878,7 @@ height: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 280px;
+    width: 83%;
     height: 40px;
     border-radius: 25px;
     background-color: #FFFFFF;
@@ -955,4 +962,11 @@ left: 15px;
 
 .menuLanguageRight a{
     opacity: 0;
+}
+.lang h2{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: monospace;
+    color: #00000093;
 }

@@ -1,4 +1,12 @@
-@media (max-width: 400px) {
+@media (max-width: 1555px) {
+    .titleHistory{
+        left: -395px;
+    }
+    .textCont h3{
+        font-size: 18px;
+    }
+}
+@media (max-width: 1200px) {
     .menu{
         width: 25%;
         height: 100%;
@@ -37,8 +45,10 @@
         height: 12px;
     }
     .container{
+        padding-top: 16px;
+        padding-left: 0;
+        padding-right: 0;
         width: 65%;
-        padding: 15;
     }
     .header_title{
 
@@ -60,6 +70,7 @@
     border-radius: 7px;
 }
 .bell{
+    display: none;
     width: 20px;
     height: 24px;
 }
@@ -68,10 +79,15 @@
     height: 9px;
     top: -2px;
     right: 3px;
+    display: none;
 }
 .header_settings{
-    width: 26px;
-    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    left: -10px;
 }
 .gar{
     width: 21px;
@@ -95,15 +111,17 @@ font-weight: 600;
     line-height: 1.6;
     color: #333333;
     margin-top: 40px;
+    margin-left: -5px;
 }
 .generate {
-    width: 120px;
+    width: 199px;
     height: 31px;
     left: 600.45px;
     top: 398px;
     font-size: 16px;
     font-weight: 600;
     line-height: 21px; 
+    margin-left: 25px;
 }
 .buttonCont{
     width: 92.5%;
@@ -115,13 +133,13 @@ font-weight: 600;
     display: none;
 }
 .historyList{
-    width: 135%;
+    width: 100%;
     height: 100%;
     margin-top: 30px;
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: darkgray lightgray; 
-    margin-left: -25px;
+    margin-left: -45px;
 }
 .historyListLiLeft h2{
     text-align: center;
@@ -139,4 +157,135 @@ font-weight: 600;
 .excuseDate{
     display: none;
 }
+.excuse_deleteTop{
+    padding-top: 2px;
+    width: 14px;
+    transition: 0.5s ease;
+    position: absolute;
+}
+.delete-hover{
+    transform: rotate(-20deg);
+    top: -5px;
+    left: -2px;
+}
+.excuse_delete{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    cursor: pointer;
+    position: relative;
+    margin-top: 3px;
+}
+.deleteExcuse{
+    width: 14px;
+}
+.bookmarkBtm {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.bookmarkBtm i{
+    font-size: 16px;
+
+}
+.historyListLiLRight{
+    width: 16%;
+    justify-content: space-between;
+    padding-right: 5px;
+}
+.settingsMenu{
+    right: -186px;
+    width: 186px;
+    height: 100%;
+ 
+    
+}
+.saveMenu{
+    height: 34px;
+}
+.menuLanguage{
+    height: 34px;
+}
+.settingsMenuCenerTop img{
+    width: 19px;
+    height: 20px;
+}
+.settingsMenuCenerTop h2{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+}
+.saveMenuLeft{
+    width: 25px;
+    height: 25px;
+}
+.menuLanguageLeft{
+    width: 25px;
+    height: 25px;
+}
+.saveMenuRight h2{
+    font-size: 14px;
+}
+.saveMenuRight i{
+    font-size: 14px;
+}
+.menuLanguageRight{
+    width: 78%;
+    height: 88%;
+}
+.lang h2{
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+}
+.menuLanguageRight select{
+    width: 60px;
+    font-size: 13px;
+position: relative;
+top: -22px;
+left: -1px;
+}
+.bookmarkList{
+    width: 78%;
+    height: 80%; 
+}
+.bookmarkListBox{
+    z-index: 99999;
+}
+.bookmarks li{
+    width: 90%;
+    min-height: 30px;
+    max-height: 160px;
+    font-weight: 400;
+    font-size: 15px;
+}
+.bookmarks{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+}
+.ratingBox img{
+    margin-left: 15px;
+    height: 32px;
+ }
+ .titleHistory{
+    position: relative;
+    top: 20px;
+    left: -90px;
+    padding-left: 15px;
+    font-size: 16px;
+    font-weight: 600;
+}
+}
+@media (max-width: 468px) {
+    .titleHistory{
+        position: relative;
+        top: 20px;
+        left: -40px;
+        padding-left: 15px;
+        font-size: 16px;
+        font-weight: 600;
+    }
 }
