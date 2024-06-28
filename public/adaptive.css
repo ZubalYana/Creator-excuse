@@ -5,8 +5,36 @@
     .textCont h3{
         font-size: 18px;
     }
+    #homePage h2{
+        font-size: 17px;
+    }
+    #adminPage h2{
+        font-size: 17px;
+    }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1220px) {
+    .titleHistory{
+        left: -305px;
+    }
+    .textCont h3{
+        font-size: 17px;
+    }
+    #homePage h2{
+        font-size: 12px;
+    }
+    #adminPage h2{
+        font-size: 12px;
+    }
+    .accountForm{
+        height: 520px;
+        right: 250px;
+    }
+    .alreadyHaveAccount{
+        font-size: 15px;
+        margin-top: 0px;
+    }
+}
+@media (max-width: 1000px) {
     .menu{
         width: 25%;
         height: 100%;
@@ -279,6 +307,23 @@ left: -1px;
     font-weight: 600;
 }
 }
+@media (max-width: 850px) {
+    .accountForm{
+        width: 416px;
+    height: 500px;
+        right: 100px;
+    }
+}
+@media (max-width: 625px) {
+    .accountForm{
+        right: 50px;
+    }
+}
+@media (max-width: 560px) {
+    .accountForm{
+        right: 28px;
+    }
+}
 @media (max-width: 468px) {
     .titleHistory{
         position: relative;
@@ -287,5 +332,8 @@ left: -1px;
         padding-left: 15px;
         font-size: 16px;
         font-weight: 600;
+    }
+    .accountForm{
+        right: 10px;
     }
 }
