@@ -317,6 +317,8 @@ left: -1px;
 @media (max-width: 625px) {
     .accountForm{
         right: 50px;
+        width: 356px;
+        
     }
 }
 @media (max-width: 560px) {
