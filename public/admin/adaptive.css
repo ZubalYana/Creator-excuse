@@ -1,0 +1,94 @@
+@media (max-width: 1400px) {
+    #homePage h2{
+        font-size: 14px;
+    }
+    #adminPage h2{
+        font-size: 14px;
+    }
+    #homePage {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    #adminPage {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+@media (max-width: 1250px) {
+#excuse{
+    width: 99%;
+
+}
+#author{
+    width: 80%;
+}
+.authorAddContainer{
+    width: 442px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+#homePage h2{
+    font-size: 12px;
+}
+#adminPage h2{
+    font-size: 12px;
+}
+
+}
+@media (max-width: 1100px) {
+    #homePage h2{
+        font-size: 12px;
+    }
+    #adminPage h2{
+        font-size: 12px;
+    }
+    #excuse{
+        width: 99%;
+    
+    }
+    #author{
+        width: 70%;
+    }
+    .authorAddContainer{
+        width: 352px;
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 15px;
+    }
+    .excusesContainer{
+        margin-right: -100px;
+        width: 100%;
+        max-height: 520px;
+        overflow-y: auto;
+    }
+    }
+    @media (max-width: 1000px) {
+        #homePage h2{
+            display: none;
+        }
+        #adminPage h2{
+            display: none;
+        }
+    }
+    @media (max-width: 925px) {
+        .homePage_rightCon{
+            margin-right: -24px;
+            width: 50%;
+        }
+        .homePage_title{
+            font-size: 24px;
+        }
+        .homePage_addExcusesCon h3{
+            font-size: 16px;
+        }
+        .exusesLength{
+            font-size: 16px;
+        }
+        .menu_logo{
+            width: 50px;
+            height: 50px;
+        }
+    }

@@ -523,3 +523,9 @@ textarea{
 .acceptChanges:active {
     background: #D48800; 
 }
+#homePage h2{
+    font-size: 19px;
+}
+#adminPage h2{
+    font-size: 19px;
+}
