@@ -338,4 +338,14 @@ left: -1px;
     .accountForm{
         right: 10px;
     }
+    @media (max-width: 400px) {
+        .accountForm{
+            width: 326px;
+            height: 480px;
+            
+        }
+        .alreadyHaveAccount{
+            display: none;
+        }
+    }
 }
