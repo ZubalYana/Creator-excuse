@@ -833,6 +833,9 @@ height: 40px;
 .bookmarkListTop i{
     cursor: pointer;
 }
+#bookmarkTitle{
+    color: #fff;
+}
 .bookmarkListBottom{
     display: flex;
     align-items: flex-start;
