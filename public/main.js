@@ -327,20 +327,20 @@ $('.alreadyHaveAccount').click(()=>{
 //         alert('Error logging in. Please try again.');
 //     });
 // });
-function displayAccountData() {
-    if (Cookies.get('loggedIn') === 'true') {
-        const name = Cookies.get('name');
-        const email = Cookies.get('email');
+// function displayAccountData() {
+//     if (Cookies.get('loggedIn') === 'true') {
+//         const name = Cookies.get('name');
+//         const email = Cookies.get('email');
         
-        $('.menu_logIn_nickName').text(name);
-        $('.menu_logIn_gmail').text(email);
-        $('.accountPage').css('display', 'none');
-    } else {
-        $('.menu_logIn_nickName').text('');
-        $('.menu_logIn_gmail').text('');
-        $('.accountPage').css('display', 'flex');
-    }
-}
+//         $('.menu_logIn_nickName').text(name);
+//         $('.menu_logIn_gmail').text(email);
+//         $('.accountPage').css('display', 'none');
+//     } else {
+//         $('.menu_logIn_nickName').text('');
+//         $('.menu_logIn_gmail').text('');
+//         $('.accountPage').css('display', 'flex');
+//     }
+// }
 $(document).ready(function () {
     $('#signInBtn').click(async function () {
         const username = $('#Sign_name').val();
@@ -373,12 +373,31 @@ $(document).ready(function () {
 
 
 //log out function
-$('#logOutBtn').click(() => {
-    Cookies.remove('loggedIn');
-    Cookies.remove('name');
-    Cookies.remove('email');
-    displayAccountData();
-});
+// $(document).ready(async function () {
+//     // try {
+//     //     const response = await axios.get('/api/user');
+//     //     $('.menu_logIn_nickName').text(response.data.username);
+//     //     $('.menu_logIn_gmail').text(response.data.email);
+
+//     //     Cookies.remove('loggedIn');
+//     //     Cookies.remove('name');
+//     //     Cookies.remove('email');
+//     //     // displayAccountData();
+//     // } catch (error) {
+//     //     alert('Failed to fetch user information');
+//     //     window.location.href = '/auth';
+//     // }
+
+    // $('#logOutBtn').click(async function () {
+    //     try {
+    //         await axios.post('/auth/logout');
+    //         window.location.href = '/auth';
+    //     } catch (error) {
+    //         alert('Failed to logout');
+    //     }
+    // });
+// });
+
 
 
 //password hiding and displaying
