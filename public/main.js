@@ -342,7 +342,7 @@ function displayAccountData() {
     }
 }
 $(document).ready(function () {
-    $('#registerBtn').click(async function () {
+    $('#signInBtn').click(async function () {
         const username = $('#Sign_name').val();
         const email = $('#Sign_email').val();
         const password = $('#Sign_password').val();
@@ -354,7 +354,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#loginBtn').click(async function () {
+    $('#signInBtn').click(async function () {
         const username = $('#Sign_name').val();
         const email = $('#Sign_email').val();
         const password = $('#Sign_password').val();
