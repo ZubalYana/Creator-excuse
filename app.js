@@ -87,30 +87,30 @@ app.put('/edit-excuse/:id', async (req, res) => {
 })
 
 //account creating
-app.post('/create-account', async (req, res) => {
-    console.log(req.body);
-    try {
-        const { name, email, password } = req.body;
-        const accounts = new Accounts({ name, email, password });
-        await accounts.save();
-        console.log('Account created');
-        res.status(201).json(accounts);
-    } catch (err) {
-        console.error('Error creating account:', err);
-        res.status(500).json({ message: err.message });
-    }
-});
+// app.post('/create-account', async (req, res) => {
+//     console.log(req.body);
+//     try {
+//         const { name, email, password } = req.body;
+//         const accounts = new Accounts({ name, email, password });
+//         await accounts.save();
+//         console.log('Account created');
+//         res.status(201).json(accounts);
+//     } catch (err) {
+//         console.error('Error creating account:', err);
+//         res.status(500).json({ message: err.message });
+//     }
+// });
 
 //get all the accounts
-app.get('/accounts', async (req, res)=>{
-    try {
-        const accounts = await Accounts.find();
-        res.json(accounts);
-    } catch (err) {
-        console.error('Error retrieving accounts:', err);
-        res.status(500).json({ message: err.message });
-    }
-});
+// app.get('/accounts', async (req, res)=>{
+//     try {
+//         const accounts = await Accounts.find();
+//         res.json(accounts);
+//     } catch (err) {
+//         console.error('Error retrieving accounts:', err);
+//         res.status(500).json({ message: err.message });
+//     }
+// });
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -127,7 +127,6 @@ app.use(cookieParser());
 app.use(express.static('public'));
 
 
-// Реєстрація користувача
 app.post('/auth/register', async (req, res) => {
     const { username, password, email } = req.body;
     if (!username || !password || !email) {
@@ -145,7 +144,6 @@ app.post('/auth/register', async (req, res) => {
     }
 });
 
-// Авторизація користувача
 app.post('/auth/login', async (req, res) => {
     const { password, email } = req.body;
     if (!email || !password ) {
@@ -167,7 +165,6 @@ app.post('/auth/login', async (req, res) => {
     res.status(200).json({ message: 'Logged in successfully' });
 });
 
-// Вихід користувача (logout)
 app.post('/auth/logout', (req, res) => {
     res.clearCookie('token');
     res.status(200).json({ message: 'Logged out successfully' });
