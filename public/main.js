@@ -362,7 +362,7 @@ $(document).ready(function () {
             const response = await axios.post('/auth/login', { email, password });
             alert(response.data.message);
             if (response.status === 200) {
-                window.location.href = '/homepage';
+                window.location.href = '/';
             }
         } catch (error) {
             alert(error.response.data.message);
