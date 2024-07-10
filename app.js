@@ -7,6 +7,9 @@ const dotenv = require('dotenv');
 const TelegramBot = require('node-telegram-bot-api');
 const TOKEN = process.env.TOKEN;
 const bot = new TelegramBot(TOKEN, { polling: false });
+const cookieParser = require('cookie-parser');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 dotenv.config();
 
