@@ -117,7 +117,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 const JWT_SECRET = 'your_jwt_secret';
 const userSchema = new mongoose.Schema({
     username: { type: String, required: true, unique: true },
-    password: { type: String, required: true }
+    password: { type: String, required: true },
+    email: { type: String, required: true}
 });
 const User = mongoose.model('User', userSchema);
 
@@ -128,13 +129,13 @@ app.use(express.static('public'));
 
 // Реєстрація користувача
 app.post('/auth/register', async (req, res) => {
-    const { username, password } = req.body;
-    if (!username || !password) {
-        return res.status(400).json({ message: 'Username and password are required' });
+    const { username, password, email } = req.body;
+    if (!username || !password || !email) {
+        return res.status(400).json({ message: 'Username, email and password are required' });
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
-    const user = new User({ username, password: hashedPassword });
+    const user = new User({ username, email, password: hashedPassword });
 
     try {
         await user.save();
@@ -146,12 +147,12 @@ app.post('/auth/register', async (req, res) => {
 
 // Авторизація користувача
 app.post('/auth/login', async (req, res) => {
-    const { username, password } = req.body;
-    if (!username || !password) {
-        return res.status(400).json({ message: 'Username and password are required' });
+    const { password, email } = req.body;
+    if (!email || !password ) {
+        return res.status(400).json({ message: 'Email and password are required' });
     }
 
-    const user = await User.findOne({ username });
+    const user = await User.findOne({ email });
     if (!user) {
         return res.status(400).json({ message: 'Invalid credentials' });
     }

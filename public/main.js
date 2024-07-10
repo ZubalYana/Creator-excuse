@@ -270,63 +270,63 @@ $('.alreadyHaveAccount').click(()=>{
     $('#LogIn').css('color', '#F5A006')
 })
 
-//signing in
-$('#signInBtn').click(() => {
-    if ($('#Sign_name').val() !== '' && $('#Sign_email').val() !== '' && $('#Sign_password').val() !== '') {
-        let data = {
-            name: $('#Sign_name').val(),
-            email: $('#Sign_email').val(),
-            password: $('#Sign_password').val()
-        };
-        axios.post('http://localhost:3000/create-account', data)
-            .then((response) => {
-                $('#Sign_name').val('');
-                $('#Sign_email').val('');
-                $('#Sign_password').val('');
-                alert('Account created successfully!');
-                location.reload();
-            })
-            .catch((error) => {
-                console.error('Error creating account:', error);
-                alert('Failed to create account. Please try again.');
-            });
-    } else {
-        alert('Fill in the inputs');
-    }
-});
+// //signing in
+// $('#signInBtn').click(() => {
+//     if ($('#Sign_name').val() !== '' && $('#Sign_email').val() !== '' && $('#Sign_password').val() !== '') {
+//         let data = {
+//             name: $('#Sign_name').val(),
+//             email: $('#Sign_email').val(),
+//             password: $('#Sign_password').val()
+//         };
+//         axios.post('http://localhost:3000/create-account', data)
+//             .then((response) => {
+//                 $('#Sign_name').val('');
+//                 $('#Sign_email').val('');
+//                 $('#Sign_password').val('');
+//                 alert('Account created successfully!');
+//                 location.reload();
+//             })
+//             .catch((error) => {
+//                 console.error('Error creating account:', error);
+//                 alert('Failed to create account. Please try again.');
+//             });
+//     } else {
+//         alert('Fill in the inputs');
+//     }
+// });
 
-//logging in
-$('#logInBtn').click(() => {
-    axios.get('http://localhost:3000/accounts')
-    .then((res) => {
-        console.log(res.data);
-        if($('#logIn_email').val() !== '' && $('#logIn_password').val() !== ''){
-            const email = $('#logIn_email').val();
-            const password = $('#logIn_password').val();
-            const account = res.data.find(acc => acc.email === email && acc.password === password);
+// //logging in
+// $('#logInBtn').click(() => {
+//     axios.get('http://localhost:3000/accounts')
+//     .then((res) => {
+//         console.log(res.data);
+//         if($('#logIn_email').val() !== '' && $('#logIn_password').val() !== ''){
+//             const email = $('#logIn_email').val();
+//             const password = $('#logIn_password').val();
+//             const account = res.data.find(acc => acc.email === email && acc.password === password);
     
-            if (account) {
-                Cookies.set('loggedIn', 'true', { expires: 1 });
-                Cookies.set('name', account.name, { expires: 1 });
-                Cookies.set('email', account.email, { expires: 1 });
+//             if (account) {
+//                 Cookies.set('loggedIn', 'true', { expires: 1 });
+//                 Cookies.set('name', account.name, { expires: 1 });
+//                 Cookies.set('email', account.email, { expires: 1 });
     
-                displayAccountData();
-                $('#logIn_email').val('')
-                $('#logIn_password').val('')
+//                 displayAccountData();
+//                 $('#logIn_email').val('')
+//                 $('#logIn_password').val('')
     
-            } else {
-                alert('No such account found');
-            }
-        }else{
-            alert('Fill in the inputs!')
-        }
+//             } else {
+//                 alert('No such account found');
+//             }
+//         }else{
+//             alert('Fill in the inputs!')
+//         }
 
-    })
-    .catch((err) => {
-        console.error('Error fetching accounts:', err);
-        alert('Error logging in. Please try again.');
-    });
-});
+//     })
+//     .catch((err) => {
+//         console.error('Error fetching accounts:', err);
+//         alert('Error logging in. Please try again.');
+//     });
+// });
 function displayAccountData() {
     if (Cookies.get('loggedIn') === 'true') {
         const name = Cookies.get('name');
@@ -341,9 +341,35 @@ function displayAccountData() {
         $('.accountPage').css('display', 'flex');
     }
 }
-$(document).ready(() => {
-    displayAccountData();
+$(document).ready(function () {
+    $('#registerBtn').click(async function () {
+        const username = $('#Sign_name').val();
+        const email = $('#Sign_email').val();
+        const password = $('#Sign_password').val();
+        try {
+            const response = await axios.post('/auth/register', { username, password, email });
+            alert(response.data.message);
+        } catch (error) {
+            alert(error.response.data.message);
+        }
+    });
+
+    $('#loginBtn').click(async function () {
+        const username = $('#Sign_name').val();
+        const email = $('#Sign_email').val();
+        const password = $('#Sign_password').val();
+        try {
+            const response = await axios.post('/auth/login', { username, password, email });
+            alert(response.data.message);
+            if (response.status === 200) {
+                window.location.href = '/homepage';
+            }
+        } catch (error) {
+            alert(error.response.data.message);
+        }
+    });
 });
+
 
 //log out function
 $('#logOutBtn').click(() => {
