@@ -346,6 +346,7 @@ $(document).ready(function () {
         const username = $('#Sign_name').val();
         const email = $('#Sign_email').val();
         const password = $('#Sign_password').val();
+        console.log(username, email, password)
         try {
             const response = await axios.post('/auth/register', { username, password, email });
             alert(response.data.message);
@@ -354,12 +355,11 @@ $(document).ready(function () {
         }
     });
 
-    $('#signInBtn').click(async function () {
-        const username = $('#Sign_name').val();
-        const email = $('#Sign_email').val();
-        const password = $('#Sign_password').val();
+    $('#logInBtn').click(async function () {
+        const email = $('#logIn_email').val();
+        const password = $('#logIn_password').val();
         try {
-            const response = await axios.post('/auth/login', { username, password, email });
+            const response = await axios.post('/auth/login', { email, password });
             alert(response.data.message);
             if (response.status === 200) {
                 window.location.href = '/homepage';
@@ -369,6 +369,7 @@ $(document).ready(function () {
         }
     });
 });
+
 
 
 //log out function
