@@ -113,6 +113,18 @@ app.get('/accounts', async (req, res)=>{
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+const JWT_SECRET = 'your_jwt_secret';
+const userSchema = new mongoose.Schema({
+    username: { type: String, required: true, unique: true },
+    password: { type: String, required: true }
+});
+const User = mongoose.model('User', userSchema);
+
+app.use(express.json());
+app.use(cookieParser());
+app.use(express.static('public'));
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
