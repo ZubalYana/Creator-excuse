@@ -131,6 +131,10 @@ app.get('/', (req, res) => {
 app.get('/admin', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'admin'));
 });
+app.get('/auth', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'auth.html'));
+});
+
 app.listen(PORT, () => {
     console.log(`Server runs on PORT: ${PORT}`);
 });
