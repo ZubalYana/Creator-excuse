@@ -187,7 +187,7 @@ const authMiddleware = (req, res, next) => {
 
 app.get('/api/user', authMiddleware, async (req, res) => {
     try {
-        const user = await User.findById(req.userId).select('username');
+        const user = await User.findById(req.userId).select('username email');
         res.status(200).json(user);
     } catch (error) {
         res.status(500).json({ message: 'Failed to fetch user information' });

@@ -249,6 +249,7 @@ document.addEventListener('DOMContentLoaded', function() {
 $(document).ready(async function () {
     try {
         const response = await axios.get('/api/user');
+        console.log(response.data)
         $('.menu_logIn_nickName').text(response.data.username);
         $('.menu_logIn_gmail').text(response.data.email);
 
