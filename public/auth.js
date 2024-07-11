@@ -34,6 +34,9 @@ $(document).ready(function () {
         try {
             const response = await axios.post('/auth/register', { username, password, email });
             alert(response.data.message);
+            $('#Sign_name').val('');
+            $('#Sign_email').val('');
+            $('#Sign_password').val('');
         } catch (error) {
             alert(error.response.data.message);
         }
