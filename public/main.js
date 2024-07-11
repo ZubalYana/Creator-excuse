@@ -270,77 +270,7 @@ $('.alreadyHaveAccount').click(()=>{
     $('#LogIn').css('color', '#F5A006')
 })
 
-// //signing in
-// $('#signInBtn').click(() => {
-//     if ($('#Sign_name').val() !== '' && $('#Sign_email').val() !== '' && $('#Sign_password').val() !== '') {
-//         let data = {
-//             name: $('#Sign_name').val(),
-//             email: $('#Sign_email').val(),
-//             password: $('#Sign_password').val()
-//         };
-//         axios.post('http://localhost:3000/create-account', data)
-//             .then((response) => {
-//                 $('#Sign_name').val('');
-//                 $('#Sign_email').val('');
-//                 $('#Sign_password').val('');
-//                 alert('Account created successfully!');
-//                 location.reload();
-//             })
-//             .catch((error) => {
-//                 console.error('Error creating account:', error);
-//                 alert('Failed to create account. Please try again.');
-//             });
-//     } else {
-//         alert('Fill in the inputs');
-//     }
-// });
 
-// //logging in
-// $('#logInBtn').click(() => {
-//     axios.get('http://localhost:3000/accounts')
-//     .then((res) => {
-//         console.log(res.data);
-//         if($('#logIn_email').val() !== '' && $('#logIn_password').val() !== ''){
-//             const email = $('#logIn_email').val();
-//             const password = $('#logIn_password').val();
-//             const account = res.data.find(acc => acc.email === email && acc.password === password);
-    
-//             if (account) {
-//                 Cookies.set('loggedIn', 'true', { expires: 1 });
-//                 Cookies.set('name', account.name, { expires: 1 });
-//                 Cookies.set('email', account.email, { expires: 1 });
-    
-//                 displayAccountData();
-//                 $('#logIn_email').val('')
-//                 $('#logIn_password').val('')
-    
-//             } else {
-//                 alert('No such account found');
-//             }
-//         }else{
-//             alert('Fill in the inputs!')
-//         }
-
-//     })
-//     .catch((err) => {
-//         console.error('Error fetching accounts:', err);
-//         alert('Error logging in. Please try again.');
-//     });
-// });
-// function displayAccountData() {
-//     if (Cookies.get('loggedIn') === 'true') {
-//         const name = Cookies.get('name');
-//         const email = Cookies.get('email');
-        
-//         $('.menu_logIn_nickName').text(name);
-//         $('.menu_logIn_gmail').text(email);
-//         $('.accountPage').css('display', 'none');
-//     } else {
-//         $('.menu_logIn_nickName').text('');
-//         $('.menu_logIn_gmail').text('');
-//         $('.accountPage').css('display', 'flex');
-//     }
-// }
 $(document).ready(function () {
     $('#signInBtn').click(async function () {
         const username = $('#Sign_name').val();
@@ -399,7 +329,6 @@ $(document).ready(function () {
 // });
 
 
-
 //password hiding and displaying
 $('.showPassword').click(function() {
     let passwordInput = $('#logIn_password');
@@ -414,12 +343,10 @@ $('.showPassword').click(function() {
     }
 });
 
-
 //telegram bot navigation
 $('.evaluate').click(function() {
     window.open('https://t.me/CreatorExcuseBot', '_blank');
 });
-
 
 $('.saveMenu').click(()=>{
     $('.bookmarkList').css('display', 'flex')
@@ -434,42 +361,23 @@ $('.closeBookmarkList').click(()=>{
     $('.bookmarkListBox').css('display', 'none')
 })
 
-
-
-
-
-
-
-
-
-
-
-//   translator from google
-  function googleTranslateElementInit() {
+//translator from google
+function googleTranslateElementInit() {
     new google.translate.TranslateElement({
         pageLanguage: 'ua', 
         autoDisplay: false
     }, 'google_translate_element');
 }
-
-
 function loadGoogleTranslateAPI() {
     var script = document.createElement('script');
     script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
     script.async = true;
     document.head.appendChild(script);
 }
-
-
-
-
-
 document.getElementById('language_select').addEventListener('change', function() {
     var selectedLanguage = this.value;
     changeWebsiteLanguage(selectedLanguage);
 });
-
-
 window.onload = function() {
     loadGoogleTranslateAPI();
     var savedLanguage = getSelectedLanguage();
