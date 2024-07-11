@@ -51,7 +51,6 @@ $(document).ready(function () {
         const password = $('#logIn_password').val();
         try {
             const response = await axios.post('/auth/login', { email, password });
-            alert(response.data.message);
             if (response.status === 200) {
                 window.location.href = '/';
             }
