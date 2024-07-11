@@ -306,9 +306,23 @@ $(document).ready(function () {
             alert('Failed to logout');
         }
     });
+    
 });
 
+$(document).ready(async function () {
+    try {
+        const response = await axios.get('/api/user');
+        $('.menu_logIn_nickName').text(response.data.username);
+        $('.menu_logIn_gmail').text(response.data.email);
 
+        Cookies.remove('loggedIn');
+        Cookies.remove('name');
+        Cookies.remove('email');
+    } catch (error) {
+        alert('Failed to fetch user information');
+        window.location.href = '/auth';
+    }
+})
 
 //log out function
 // $(document).ready(async function () {
