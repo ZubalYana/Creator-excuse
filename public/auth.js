@@ -33,7 +33,7 @@ $(document).ready(function () {
         console.log(username, email, password)
         try {
             const response = await axios.post('/auth/register', { username, password, email });
-            alert(response.data.message);
+            // alert(response.data.message);
             $('#Sign_name').val('');
             $('#Sign_email').val('');
             $('#Sign_password').val('');
