@@ -298,6 +298,14 @@ $(document).ready(function () {
             alert(error.response.data.message);
         }
     });
+        $('#logOutBtn').click(async function () {
+        try {
+            await axios.post('/auth/logout');
+            window.location.href = '/auth';
+        } catch (error) {
+            alert('Failed to logout');
+        }
+    });
 });
 
 
