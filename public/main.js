@@ -257,7 +257,6 @@ $(document).ready(async function () {
         Cookies.remove('name');
         Cookies.remove('email');
     } catch (error) {
-        alert('Failed to fetch user information');
         window.location.href = '/auth';
     }
     $('#logOutBtn').click(async function () {
