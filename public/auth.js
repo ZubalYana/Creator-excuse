@@ -37,6 +37,10 @@ $(document).ready(function () {
             $('#Sign_name').val('');
             $('#Sign_email').val('');
             $('#Sign_password').val('');
+            $('.logInCon').css('display', 'flex')
+            $('.SignInCon').css('display', 'none')
+            $('#SignIn').css('color', '#000')
+            $('#LogIn').css('color', '#F5A006')
         } catch (error) {
             alert(error.response.data.message);
         }
