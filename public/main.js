@@ -270,33 +270,6 @@ $(document).ready(async function () {
     });
 })
 
-//log out function
-// $(document).ready(async function () {
-//     // try {
-//     //     const response = await axios.get('/api/user');
-//     //     $('.menu_logIn_nickName').text(response.data.username);
-//     //     $('.menu_logIn_gmail').text(response.data.email);
-
-//     //     Cookies.remove('loggedIn');
-//     //     Cookies.remove('name');
-//     //     Cookies.remove('email');
-//     //     // displayAccountData();
-//     // } catch (error) {
-//     //     alert('Failed to fetch user information');
-//     //     window.location.href = '/auth';
-//     // }
-
-    // $('#logOutBtn').click(async function () {
-    //     try {
-    //         await axios.post('/auth/logout');
-    //         window.location.href = '/auth';
-    //     } catch (error) {
-    //         alert('Failed to logout');
-    //     }
-    // });
-// });
-
-
 //password hiding and displaying
 $('.showPassword').click(function() {
     let passwordInput = $('#logIn_password');
