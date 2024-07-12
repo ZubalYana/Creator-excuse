@@ -202,6 +202,12 @@
     top: 13px;
     cursor: pointer;
 }
+.showPasswordSignIn{
+    position: absolute;
+    right: 10px;
+    top: 13px;
+    cursor: pointer;
+}
 .feedbackMessage{
     width: 250px;
     height: 70px;
