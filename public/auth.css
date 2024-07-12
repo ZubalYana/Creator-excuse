@@ -188,3 +188,14 @@
     color: #FFC700;
 
 }
+.feedbackMessage{
+    width: 230px;
+    height: 70px;
+    background-color: #fff;
+    border: #F5A006 2px solid;
+    border-radius: 10px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 9999;
+}
