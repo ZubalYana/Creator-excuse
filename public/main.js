@@ -269,19 +269,7 @@ $(document).ready(async function () {
     });
 })
 
-//password hiding and displaying
-$('.showPassword').click(function() {
-    let passwordInput = $('#logIn_password');
-    let icon = $(this);
 
-    if (passwordInput.attr('type') === 'password') {
-        passwordInput.attr('type', 'text');
-        icon.removeClass('fa-eye-slash').addClass('fa-eye');
-    } else {
-        passwordInput.attr('type', 'password');
-        icon.removeClass('fa-eye').addClass('fa-eye-slash');
-    }
-});
 
 //telegram bot navigation
 $('.evaluate').click(function() {
