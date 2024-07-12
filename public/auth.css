@@ -188,6 +188,20 @@
     color: #FFC700;
 
 }
+.passwordInputCon{
+    width: 100%;
+    height: 35px;
+    position: relative;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+.showPassword{
+    position: absolute;
+    right: 10px;
+    top: 13px;
+    cursor: pointer;
+}
 .feedbackMessage{
     width: 250px;
     height: 70px;
