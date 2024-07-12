@@ -43,6 +43,9 @@ $(document).ready(function () {
             $('#LogIn').css('color', '#F5A006')
             $('.feedbackMessage').css('display', 'flex')
             $('.feedbackMessage').text('Registration successfull!')
+            setTimeout(() => {
+                $('.feedbackMessage').css('display', 'none')
+            }, 2000);
 
 
         } catch (error) {
