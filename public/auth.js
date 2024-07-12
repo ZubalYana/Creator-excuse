@@ -41,6 +41,10 @@ $(document).ready(function () {
             $('.SignInCon').css('display', 'none')
             $('#SignIn').css('color', '#000')
             $('#LogIn').css('color', '#F5A006')
+            $('.feedbackMessage').css('display', 'flex')
+            $('.feedbackMessage').text('Registration successfull!')
+
+
         } catch (error) {
             alert(error.response.data.message);
         }
