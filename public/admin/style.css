@@ -529,3 +529,11 @@ textarea{
 #adminPage h2{
     font-size: 19px;
 }
+.homePage_title h2{
+    font-size: 28px;
+}
+.homePage_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

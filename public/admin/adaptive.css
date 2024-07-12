@@ -97,4 +97,10 @@
             flex-direction: column;
 
         }
+        #excuse{
+            width: 300px;
+        }
+        .homePage_title h2{
+            display: none;
+        }
     }
