@@ -195,6 +195,7 @@
     border: #F5A006 2px solid;
     border-radius: 10px;
     position: absolute;
+    display: none;
     top: 50px;
     left: 50px;
     z-index: 9999;
