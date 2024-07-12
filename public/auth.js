@@ -75,9 +75,11 @@ $('.showPassword').click(function() {
 
     if (passwordInput.attr('type') === 'password') {
         passwordInput.attr('type', 'text');
-        icon.removeClass('fa-eye-slash').addClass('fa-eye');
+        icon.removeClass('fa-eye').addClass('fa-eye-slash');
+
     } else {
         passwordInput.attr('type', 'password');
-        icon.removeClass('fa-eye').addClass('fa-eye-slash');
+        icon.removeClass('fa-eye-slash').addClass('fa-eye');
+
     }
 });
